@@ -20,7 +20,7 @@ There is a version of building in public that is really building in public *rela
 
 The useful public artifact is not the finished feature. It's the decision trail that produced it. Why did I choose this data model? What did I try before the auth library that finally worked? Where is the code still ugly, and why did I leave it that way?
 
-When I build Palmshed in public, I post the decisions, not just the merges. The week the config layer went from one long function to three named ones, the post wasn't a screenshot — it was the before and after, and why the rename mattered. That post got more useful replies than any release announcement, because it showed a real trade-off being made.
+When I build kit in public, I post the decisions, not just the merges. The week the config layer went from one long function to three named ones, the post wasn't a screenshot — it was the before and after, and why the rename mattered. That post got more useful replies than any release announcement, because it showed a real trade-off being made.
 
 Posting the process changes how I work. Because the process is on the record, it gets cleaner. I write better commit messages, leave more honest comments, and think harder before I take a shortcut — because the shortcut is now public. The audience doesn't just receive the work. It audits it, which is exactly what I want.
 

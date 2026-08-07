@@ -4,7 +4,7 @@ Last updated: September 2026.
 
 ## Building
 
-**Palmshed** — a command-line developer tool, built in public. Currently adding the layered config feature (file + environment + defaults) and improving error messages on the first-run path.
+**kit** — a command-line developer tool, built in public. Currently adding the layered config feature (file + environment + defaults) and improving error messages on the first-run path.
 
 ## Learning
 

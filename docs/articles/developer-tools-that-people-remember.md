@@ -28,7 +28,7 @@ The inverse is also true. A tool that interrupts flow even once a day is worse t
 
 When a tool works, the developer ignores it. When it fails, the developer reads every word. That means the error message is the most important surface of the tool — and the one most tools neglect.
 
-I built Palmshed around this. Every error it emits answers four questions, in order: what went wrong, where, what the developer should do about it, and what happens if they don't. The first time I shipped an error that was just the raw exception text, a beta tester replied with a screenshot and a one-word review: "what?" — that was the day error messages became a first-class feature.
+I built kit around this. Every error it emits answers four questions, in order: what went wrong, where, what the developer should do about it, and what happens if they don't. The first time I shipped an error that was just the raw exception text, a beta tester replied with a screenshot and a one-word review: "what?" — that was the day error messages became a first-class feature.
 
 ![The error message is the interface — what, where, what to do](/diagrams/diagram-error-message.svg)
 
@@ -38,7 +38,7 @@ A good error message answers four questions, in order: what went wrong, where, w
 
 Every default value a tool ships is a claim about how its users should work. I've learned to make those defaults deliberately, because almost everyone keeps them. The convention a tool ships is the convention its users live with.
 
-Palmshed's first release shipped one default I came to regret: it overwrote a config file in place on a command that most people ran twice a day. Nobody asked for a warning. When I added a `--dry-run` flag that previews the rewrite, the change was small and the trust it restored was large.
+kit's first release shipped one default I came to regret: it overwrote a config file in place on a command that most people ran twice a day. Nobody asked for a warning. When I added a `--dry-run` flag that previews the rewrite, the change was small and the trust it restored was large.
 
 Good defaults are conservative: they fail safe, they don't overwrite, they explain before they modify. When a tool does something surprising by default — reformats your code, changes your permissions, deletes a branch — it has broken trust with the one audience least tolerant of surprises.
 

@@ -26,7 +26,7 @@ Small changes isolate variables. One change, one decision, one review. When it b
 
 Splitting work into small changes is not a scheduling accident. It is a design decision, made deliberately, and it often requires designing the intermediate states.
 
-The change that taught me this was adding layered config to Palmshed. It was one feature, and my instinct was to write it as one PR. Instead, I split it the way I'd split a dependency:
+The change that taught me this was adding layered config to kit. It was one feature, and my instinct was to write it as one PR. Instead, I split it the way I'd split a dependency:
 
 1. First PR: rename the config type and move it into its own module. Zero behavior change. Reviewed and merged on its own.
 2. Second PR: add the file layer on top of the existing defaults. One new behavior, landing on clean seams.

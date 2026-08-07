@@ -4,10 +4,10 @@ slug: post-21-flagship-article
 date: 2026-09-09
 status: published
 topic: design-article
-hook: "I spent a month designing Palmshed's configuration system. The rules I ended up with were the opposite of the ones I started with."
+hook: "I spent a month designing kit's configuration system. The rules I ended up with were the opposite of the ones I started with."
 ---
 
-I spent a month designing Palmshed's configuration system, and I wrote the whole thing down — the full account is now live on the site.
+I spent a month designing kit's configuration system, and I wrote the whole thing down — the full account is now live on the site.
 
 This is the design that made me reverse my instincts:
 

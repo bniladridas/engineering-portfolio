@@ -26,7 +26,7 @@ Refactoring is rewriting that structure to be self-documenting. The best refacto
 
 Code is read far more often than it is written. The dominant cost of any codebase is reading it, and names are what the reader sees first. A good name answers the reader's first question — what is this? — before they spend any effort.
 
-The most instructive refactor I did in Palmshed was a single rename: `apply` became `applyEnvOverrides`. Same body, same call sites. But the original name had been the reason the function kept growing — every new override rule went into `apply` because "apply" accepted anything. The new name set a boundary the code respected. The rename was not cosmetic; it was a transmission of meaning that had been living only in my head.
+The most instructive refactor I did in kit was a single rename: `apply` became `applyEnvOverrides`. Same body, same call sites. But the original name had been the reason the function kept growing — every new override rule went into `apply` because "apply" accepted anything. The new name set a boundary the code respected. The rename was not cosmetic; it was a transmission of meaning that had been living only in my head.
 
 I take names seriously in refactors. When a function's name requires its body to be understood, that's not a comment problem; that's a name problem. When a variable called `data` would be better called `pendingInvites`, the rename is a correction of the message, not a style preference.
 
@@ -36,7 +36,7 @@ Long functions are walls of text. The reader must hold the entire thing in worki
 
 ![Refactoring as a map — a wall becomes rooms with names, so the reader chooses where to look](/diagrams/diagram-refactor-map.svg)
 
-When I split Palmshed's config loader, the original function did three jobs: parse the file, flatten environment overrides, and validate required keys. The refactor turned it into three functions whose names are a map of the behavior. The deleted comment — "parse and merge config, then check required fields" — had been describing exactly what the three names now say for free. Deleting it was part of the refactor, not a loss.
+When I split kit's config loader, the original function did three jobs: parse the file, flatten environment overrides, and validate required keys. The refactor turned it into three functions whose names are a map of the behavior. The deleted comment — "parse and merge config, then check required fields" — had been describing exactly what the three names now say for free. Deleting it was part of the refactor, not a loss.
 
 The test for extraction is not length. It's whether a chunk has a single coherent job that can be named. If I can say "this part validates the payload" and "this part formats the error," the function deserves to be two functions. The act of naming those chunks — and deleting the old comment that described them — is the refactor.
 

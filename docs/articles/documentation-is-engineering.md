@@ -22,7 +22,7 @@ For most of my career I treated docs as an afterthought — the thing you write 
 
 A codebase is a frozen conversation. Every branch, every default, every workaround encodes a decision that someone once made under constraints I can no longer see. Without context, I can only guess at the reasoning, and guessing is how systems get broken.
 
-When I was building Palmshed's config handling, I made a decision that looks wrong from the outside: the loader accepts a string, not a path. Any reader of the code would flag that as an inconsistency. The doc next to it explains why — the config can come from a file, a URL, or an environment-injected string, and the loader should not care about its source. That one paragraph turned a would-be refactor into an unnecessary one.
+When I was building kit's config handling, I made a decision that looks wrong from the outside: the loader accepts a string, not a path. Any reader of the code would flag that as an inconsistency. The doc next to it explains why — the config can come from a file, a URL, or an environment-injected string, and the loader should not care about its source. That one paragraph turned a would-be refactor into an unnecessary one.
 
 Comments and docs fill that gap. They are the memory of the project. The best ones answer questions the code raises but cannot answer:
 
@@ -52,7 +52,7 @@ Good documentation is designed, not typed. I structure docs the way I structure 
 - **Why it works this way** — the decisions, the rejected alternatives, the constraints.
 - **Where the edges are** — known limitations, sharp corners, deliberately skipped work.
 
-The last section is the most important and the most skipped. Palmshed's README has an "edges" section that names the two things I knowingly left rough: no Windows path handling in the first release, and config validation that assumes UTF-8. Naming them turned surprises into expectations — and turned two incoming issues into "we know, it's in the plan."
+The last section is the most important and the most skipped. kit's README has an "edges" section that names the two things I knowingly left rough: no Windows path handling in the first release, and config validation that assumes UTF-8. Naming them turned surprises into expectations — and turned two incoming issues into "we know, it's in the plan."
 
 ## The docs that survive
 

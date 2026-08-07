@@ -22,7 +22,7 @@ Across personal projects and open source, I've found that small engineering deci
 
 Clever code is fun to write and miserable to maintain. It concentrates all the knowledge in one place — the author's head — and forces every future reader to reconstruct it. A clever one-liner that saves three lines today costs three hours of confusion next quarter.
 
-I hit this head-on in Palmshed, the CLI tool I build in public. The first version of its config loader was a single, impressive function: it parsed YAML, flattened environment overrides, and validated required keys — all in forty dense lines. It worked. It also took me an evening to re-understand every time I needed to add a field. When I finally split it into three named functions — `loadConfig`, `applyOverrides`, `validate` — the behavior was identical. The difference was that I could now hold the whole thing in my head, and so could anyone else.
+I hit this head-on in kit, the CLI tool I build in public. The first version of its config loader was a single, impressive function: it parsed YAML, flattened environment overrides, and validated required keys — all in forty dense lines. It worked. It also took me an evening to re-understand every time I needed to add a field. When I finally split it into three named functions — `loadConfig`, `applyOverrides`, `validate` — the behavior was identical. The difference was that I could now hold the whole thing in my head, and so could anyone else.
 
 Maintainable code is the opposite. It is boring by design. It follows the conventions of the codebase, names things by what they do, and keeps surprising behavior behind a clear boundary. It assumes the next reader is tired, distracted, and slightly annoyed, and it makes their job easy anyway.
 

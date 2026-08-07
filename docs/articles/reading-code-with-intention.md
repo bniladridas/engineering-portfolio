@@ -28,7 +28,7 @@ I read from the outside in. I start with what the system is supposed to do — t
 
 The single most useful question when reading unfamiliar code is: who calls this, and what does it call? That graph is the skeleton of the system. Everything else — the bodies, the comments, the formatting — is flesh.
 
-When I picked up Palmshed's codebase after a month away from it, I didn't reread it. I re-traced it: the three command entry points, the config path, the layer where output is rendered. Fifteen minutes of map-building told me everything I needed to start shipping again. I build the map fast and roughly: a list of entry points, the functions each one reaches, and the data that flows between them. Most understanding comes from this skeleton, not from deep reading. I defer deep reading until the map says a specific function is load-bearing.
+When I picked up kit's codebase after a month away from it, I didn't reread it. I re-traced it: the three command entry points, the config path, the layer where output is rendered. Fifteen minutes of map-building told me everything I needed to start shipping again. I build the map fast and roughly: a list of entry points, the functions each one reaches, and the data that flows between them. Most understanding comes from this skeleton, not from deep reading. I defer deep reading until the map says a specific function is load-bearing.
 
 ![Reading code from behavior inward — follow the call graph, deep-read only the load-bearing parts](/diagrams/diagram-call-graph.svg)
 

@@ -46,7 +46,7 @@ There is a kind of architecture that looks beautiful in a diagram and is brutal 
 
 The maintainable system favors predictability over elegance. I want to open a file and guess what it does, from the name, without reading a third of it. That predictability comes from consistency: same shape for same jobs, same conventions, same failure modes. Novelty is the enemy of maintainability. Every time a system does something differently, the next reader pays.
 
-In Palmshed, every command follows the same three-part shape: parse args, load config, run. It is deliberately repetitive. A new command can be written by copying the previous one and changing the middle. Repetition with a consistent shape beats abstraction that hides the shape.
+In kit, every command follows the same three-part shape: parse args, load config, run. It is deliberately repetitive. A new command can be written by copying the previous one and changing the middle. Repetition with a consistent shape beats abstraction that hides the shape.
 
 ## The design document as memory
 

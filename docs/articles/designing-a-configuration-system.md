@@ -4,7 +4,7 @@ slug: designing-a-configuration-system
 date: 2026-09-09
 status: published
 tags: [configuration, architecture, developer-tools]
-intro: I spent a month designing Palmshed's configuration system. The rules I ended up with were the opposite of the ones I started with — and the whole design fits on one page.
+intro: I spent a month designing kit's configuration system. The rules I ended up with were the opposite of the ones I started with — and the whole design fits on one page.
 references:
   - label: kit — the CLI this design is for
     url: kit
@@ -18,7 +18,7 @@ references:
 
 # Designing a Configuration System
 
-I spent a month designing Palmshed's configuration system. The rules I ended up with were the opposite of the ones I started with — and the whole design fits on one page.
+I spent a month designing kit's configuration system. The rules I ended up with were the opposite of the ones I started with — and the whole design fits on one page.
 
 This is the story of that month. It's not a story about parsing YAML. It's a story about how a small system, given enough pressure, reveals the principles underneath it. Configuration looks like the boring part of a developer tool. It is also the part every user touches, and the part most tools get wrong.
 
@@ -38,7 +38,7 @@ These three pull in opposite directions. The user wants magic; the developer wan
 
 I started with the wrong mental model. I thought configuration was a data structure — a bag of key-value pairs that the tool reads at startup. That model is why so many config systems fail. It treats config as something static, when it is really a *decision process*.
 
-Here is what I mean. When Palmshed runs, it needs to know, say, where to write its output. That answer comes from several places, any of which might provide it:
+Here is what I mean. When kit runs, it needs to know, say, where to write its output. That answer comes from several places, any of which might provide it:
 
 - A default baked into the tool.
 - A setting in the user's config file.
@@ -103,7 +103,7 @@ The order I settled on is boring, which is how I know it's right:
 3. **Config file** — checked into the repo. Stable, reviewable, shared.
 4. **Defaults** — baked into the tool. The floor that makes every other layer optional.
 
-![Config precedence in Palmshed — flags beat environment beat file beat defaults](/diagrams/diagram-config-layers.svg)
+![Config precedence in kit — flags beat environment beat file beat defaults](/diagrams/diagram-config-layers.svg)
 
 Each layer overrides the ones below it. Higher wins; the loader applies layers bottom-up.
 
@@ -120,7 +120,7 @@ The first implementation was a single function. It parsed the file, flattened en
 The refactor split it into three functions whose names are a map of the behavior:
 
 ```python
-# pseudocode for the Palmshed config loader
+# pseudocode for the kit config loader
 def load_config(args, env, file_path):
     base = defaults()
     merged = merge_layers(
@@ -154,7 +154,7 @@ The interesting part is what the split revealed. With the code walled off, the *
 
 ## Merging is not updating
 
-The dictionary update in `merge_layers` is correct for flat keys, and Palmshed's config was initially flat. But "flat config" is a promise you keep until the first nested setting. When the config grew a `search` section — `search.max_results`, `search.fuzzy` — the merge needed a decision, and the naive `dict.update` would have done the wrong thing.
+The dictionary update in `merge_layers` is correct for flat keys, and kit's config was initially flat. But "flat config" is a promise you keep until the first nested setting. When the config grew a `search` section — `search.max_results`, `search.fuzzy` — the merge needed a decision, and the naive `dict.update` would have done the wrong thing.
 
 Two merge policies were on the table:
 
@@ -203,7 +203,7 @@ The third decision is the one most tools skip, and it's the one that makes the l
 
 ## The decision that looks wrong from the outside
 
-Every design has one decision that reads as a bug until it's explained. For Palmshed's config, it's this: the loader takes a *string*, not a path.
+Every design has one decision that reads as a bug until it's explained. For kit's config, it's this: the loader takes a *string*, not a path.
 
 ```python
 load_config(config_source, args, env)
@@ -298,7 +298,7 @@ Honest accounting: three decisions I'd reverse if I did it again.
 
 **The first validation schema was too strict.** I required fields that should have been optional-with-sane-defaults. The rule I now keep: if a setting has a default that is *correct for everyone*, it's not required, it's a default. Required is reserved for settings where there is no sensible default at all — the output directory, the format, the things the tool cannot guess.
 
-**I under-designed the "no config at all" case.** Palmshed should be usable with zero config, and for most of the month it wasn't — too many settings lacked defaults. The tool now runs out of the box with a small, correct default set, and the config file is an optimization for the users who outgrow that. A tool that demands config before it runs has already lost the user.
+**I under-designed the "no config at all" case.** kit should be usable with zero config, and for most of the month it wasn't — too many settings lacked defaults. The tool now runs out of the box with a small, correct default set, and the config file is an optimization for the users who outgrow that. A tool that demands config before it runs has already lost the user.
 
 ## The principles that survived
 
