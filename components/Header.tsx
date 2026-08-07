@@ -23,7 +23,7 @@ export default function Header() {
           paddingBottom: 'var(--space-4)',
         }}
       >
-        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)', color: 'var(--black)' }} aria-label="Home">
+        <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 'var(--space-2)', color: 'var(--black)' }}>
           <svg width="28" height="28" viewBox="0 0 48 48" fill="none" stroke="#1f883d" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
             <path d="M14 32v-8" />
             <path d="M14 32h20" />

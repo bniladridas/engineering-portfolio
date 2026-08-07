@@ -106,7 +106,7 @@ a:hover {
 
 .badge--green {
   background: var(--green-muted);
-  color: var(--green);
+  color: #116329;
 }
 
 .prose {
