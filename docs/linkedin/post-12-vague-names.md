@@ -1,5 +1,5 @@
 ---
-title: 'data', 'info', and the cost of vague names
+title: "'data', 'info', and the cost of vague names"
 slug: post-12-vague-names
 date: 2026-06-17
 status: published
