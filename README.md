@@ -19,10 +19,11 @@ engineering-portfolio/
 │   ├── now/               # now page
 │   ├── about/             # profile rendered from docs/profile/
 │   ├── search/            # client-side search
+│   ├── search-index.json/ # build-time search index
 │   ├── sitemap.ts         # XML sitemap
-│   ├── feed.xml/          # RSS feed
-│   └── opengraph-image.tsx
+│   └── feed.xml/          # RSS feed
 ├── components/            # header, cards, markdown, TOC, prev/next, …
+├── public/                # og.png (generated) + copied diagrams/favicon
 ├── lib/                   # content + search + reading utilities
 ├── docs/
 │   ├── articles/          # 10 long-form engineering articles
@@ -38,7 +39,7 @@ engineering-portfolio/
 ├── prompts/               # image generation prompts
 ├── design-system/         # colors, typography, spacing, components, cards
 ├── templates/             # ready-to-fill templates for new content
-└── scripts/               # validate, stats, copy-assets
+└── scripts/               # validate, stats, copy-assets, generate-og
 ```
 
 ## Voice
@@ -105,7 +106,7 @@ npm run typecheck    # TypeScript check
 - **Real URLs:** the `references:` links in articles and the GitHub link in `lib/site.ts` currently point to `github.com/palmshed/*`. Replace them with the real repositories and pull requests.
 - **Site URL:** set `NEXT_PUBLIC_SITE_URL` (used for canonical URLs, sitemap, RSS, OG images). When
   deploying at a sub-path, also set `NEXT_PUBLIC_BASE_PATH` so all links and assets are prefixed.
-- **Open Graph:** `/opengraph-image` generates the social card; verify it after deployment.
+- **Open Graph:** `scripts/generate-og.mjs` renders `public/og.png` at build time; verify the social card after deployment.
 - **Accessibility:** run an axe scan and a Lighthouse pass before linking from LinkedIn.
 
 ## Status

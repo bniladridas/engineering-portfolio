@@ -12,7 +12,7 @@ const plex = IBM_Plex_Sans({
   variable: '--font-plex',
 })
 
-const ogImage = { url: withBase('/opengraph-image.png'), width: 1200, height: 630 }
+const ogImage = { url: withBase('/og.png'), width: 1200, height: 630 }
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
