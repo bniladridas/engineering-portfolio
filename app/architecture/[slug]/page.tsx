@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import { getArchNote, getArchNotes, formatDate } from '@/lib/content'
 import { getReadingTime } from '@/lib/reading'
-import { site } from '@/lib/site'
+import { site, withBase, absUrl } from '@/lib/site'
 import Markdown from '@/components/Markdown'
 import Badge from '@/components/Badge'
 
@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const note = getArchNote(slug)
   if (!note) return {}
-  const url = `${site.url}/architecture/${note.slug}/`
+  const url = absUrl(`/architecture/${note.slug}/`)
   return {
     title: `${note.title} — Palmshed`,
     description: note.content.slice(0, 160),
@@ -45,7 +45,7 @@ export default async function ArchNotePage({ params }: { params: Promise<{ slug:
     <article className="container" style={{ paddingTop: 'var(--space-8)', paddingBottom: 'var(--space-8)' }}>
       <div style={{ maxWidth: '66ch' }}>
         <div style={{ display: 'flex', gap: 'var(--space-2)', marginBottom: 'var(--space-4)' }}>
-          <a href="/architecture/" style={{ color: 'var(--ink-secondary)', fontSize: 14, textDecoration: 'none' }}>
+          <a href={withBase('/architecture/')} style={{ color: 'var(--ink-secondary)', fontSize: 14, textDecoration: 'none' }}>
             ← Architecture notes
           </a>
         </div>
@@ -85,7 +85,7 @@ export default async function ArchNotePage({ params }: { params: Promise<{ slug:
                 <p className="eyebrow" style={{ margin: '0 0 var(--space-1)' }}>
                   ← Previous
                 </p>
-                <a href={`/architecture/${previous.slug}/`} style={{ color: 'var(--black)', fontWeight: 500 }}>
+                <a href={withBase(`/architecture/${previous.slug}/`)} style={{ color: 'var(--black)', fontWeight: 500 }}>
                   {previous.title}
                 </a>
               </>
@@ -97,7 +97,7 @@ export default async function ArchNotePage({ params }: { params: Promise<{ slug:
                 <p className="eyebrow" style={{ margin: '0 0 var(--space-1)' }}>
                   Next →
                 </p>
-                <a href={`/architecture/${next.slug}/`} style={{ color: 'var(--black)', fontWeight: 500 }}>
+                <a href={withBase(`/architecture/${next.slug}/`)} style={{ color: 'var(--black)', fontWeight: 500 }}>
                   {next.title}
                 </a>
               </>

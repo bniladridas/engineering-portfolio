@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 import { slugifyHeading } from '@/lib/reading'
+import { withBase } from '@/lib/site'
 
 function heading(level: 'h2' | 'h3') {
   const Tag = level
@@ -31,10 +32,11 @@ export default function Markdown({ children }: { children: string }) {
           h3: heading('h3'),
           img: ({ src, alt }) => {
             const source = typeof src === 'string' ? src : undefined
+            const href = source?.startsWith('/') ? withBase(source) : source
             if (source?.startsWith('/diagrams/')) {
               return (
                 <figure className="diagram" style={{ margin: 'var(--space-7) 0' }}>
-                  <img src={source} alt={alt ?? ''} style={{ width: '100%', height: 'auto', border: '1px solid var(--line)', borderRadius: 12 }} />
+                  <img src={href} alt={alt ?? ''} style={{ width: '100%', height: 'auto', border: '1px solid var(--line)', borderRadius: 12 }} />
                   {alt ? (
                     <figcaption style={{ color: 'var(--ink-secondary)', fontSize: 14, textAlign: 'center', marginTop: 'var(--space-2)' }}>
                       {alt}
@@ -43,12 +45,13 @@ export default function Markdown({ children }: { children: string }) {
                 </figure>
               )
             }
-            return <img src={source} alt={alt ?? ''} style={{ maxWidth: '100%' }} />
+            return <img src={href} alt={alt ?? ''} style={{ maxWidth: '100%' }} />
           },
           a: ({ href, children }) => {
             const external = href?.startsWith('http')
+            const target = href?.startsWith('/') ? withBase(href) : href
             return (
-              <a href={href} {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
+              <a href={target} {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
                 {children}
               </a>
             )

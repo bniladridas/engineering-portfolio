@@ -1,5 +1,5 @@
 import { getArticles, getPosts } from '@/lib/content'
-import { site } from '@/lib/site'
+import { site, absUrl } from '@/lib/site'
 
 function escapeXml(s: string): string {
   return s
@@ -21,8 +21,8 @@ export function GET() {
     const item = `
   <item>
     <title>${escapeXml(entry.title)}</title>
-    <link>${site.url}${href}</link>
-    <guid isPermaLink="true">${site.url}${href}</guid>
+    <link>${absUrl(href)}</link>
+    <guid isPermaLink="true">${absUrl(href)}</guid>
     <pubDate>${new Date(entry.date).toUTCString()}</pubDate>
     <description>${escapeXml(description)}</description>
   </item>`
@@ -33,11 +33,11 @@ export function GET() {
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>${escapeXml(site.title)}</title>
-    <link>${site.url}</link>
+    <link>${absUrl('/')}</link>
     <description>${escapeXml(site.description)}</description>
     <language>en</language>
     <lastBuildDate>${now}</lastBuildDate>
-    <atom:link href="${site.url}/feed.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="${absUrl('/feed.xml')}" rel="self" type="application/rss+xml"/>
     ${items.join('\n')}
   </channel>
 </rss>`

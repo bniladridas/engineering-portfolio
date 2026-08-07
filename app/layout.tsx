@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, IBM_Plex_Sans } from 'next/font/google'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { site } from '@/lib/site'
+import { site, absUrl, withBase } from '@/lib/site'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
@@ -12,30 +12,34 @@ const plex = IBM_Plex_Sans({
   variable: '--font-plex',
 })
 
+const ogImage = { url: withBase('/opengraph-image.png'), width: 1200, height: 630 }
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: site.title,
   description: site.description,
-  alternates: { canonical: '/' },
+  alternates: { canonical: absUrl('/') },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: site.url,
+    url: absUrl('/'),
     siteName: site.name,
     title: site.title,
     description: site.description,
+    images: [ogImage],
   },
   twitter: {
     card: 'summary_large_image',
     title: site.title,
     description: site.description,
+    images: [ogImage],
   },
   robots: {
     index: true,
     follow: true,
   },
   icons: {
-    icon: '/favicon.svg',
+    icon: withBase('/favicon.svg'),
   },
 }
 
@@ -43,7 +47,7 @@ const webSiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: site.name,
-  url: site.url,
+  url: absUrl('/'),
   description: site.description,
 }
 
@@ -52,7 +56,7 @@ const personJsonLd = {
   '@type': 'Person',
   name: site.author.name,
   jobTitle: site.author.jobTitle,
-  url: site.url,
+  url: absUrl('/'),
   sameAs: [site.author.github],
   knowsAbout: ['maintainable systems', 'developer tools', 'open source', 'authentication', 'Flutter'],
 }

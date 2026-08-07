@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import Link from 'next/link'
 import { search, type SearchEntry } from '@/lib/search-utils'
+import { withBase } from '@/lib/site'
 import Badge from '@/components/Badge'
 
 export default function SearchPage() {
@@ -12,7 +13,7 @@ export default function SearchPage() {
   const inputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
-    fetch('/search-index.json')
+    fetch(withBase('/search-index.json'))
       .then((r) => r.json())
       .then(setIndex)
       .catch(() => setIndex([]))

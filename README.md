@@ -59,6 +59,14 @@ npx serve out     # preview the static export locally
 The repository includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that builds the
 static export and publishes it to GitHub Pages on every push to `main`.
 
+The workflow sets two build-time env vars so the static export is path-aware:
+
+- `NEXT_PUBLIC_BASE_PATH=/<repo>` — prefixes every internal link and asset URL (via `basePath` +
+  `assetPrefix`), which is required because GitHub Pages serves project sites under
+  `/engineering-portfolio/` rather than the domain root.
+- `NEXT_PUBLIC_SITE_URL=https://<user>.github.io` — origin used for canonical URLs, sitemap, RSS,
+  and Open Graph.
+
 One-time setup (repo settings → Pages):
 
 1. Set **Source** to **GitHub Actions**.
@@ -69,7 +77,9 @@ One-time setup (repo settings → Pages):
 Custom domain (optional):
 
 - When the site moves to a real domain (e.g. `notes.palmshed.dev`), add a `CNAME` file at the repo
-  root containing the domain and point the DNS record at GitHub Pages.
+  root containing the domain, point the DNS record at GitHub Pages, and drop the two env vars from
+  the workflow (or set `NEXT_PUBLIC_BASE_PATH=` empty). The codebase defaults to domain-root URLs,
+  so no code changes are needed — the switch is a single environment variable.
 - Until then, no `CNAME` is needed — the site lives at `https://<user>.github.io/engineering-portfolio/`.
 
 `404.html` is generated automatically by the static export.
@@ -93,7 +103,8 @@ npm run typecheck    # TypeScript check
 ## Before you publish — checklist
 
 - **Real URLs:** the `references:` links in articles and the GitHub link in `lib/site.ts` currently point to `github.com/palmshed/*`. Replace them with the real repositories and pull requests.
-- **Site URL:** set `NEXT_PUBLIC_SITE_URL` (used for canonical URLs, sitemap, RSS, OG images).
+- **Site URL:** set `NEXT_PUBLIC_SITE_URL` (used for canonical URLs, sitemap, RSS, OG images). When
+  deploying at a sub-path, also set `NEXT_PUBLIC_BASE_PATH` so all links and assets are prefixed.
 - **Open Graph:** `/opengraph-image` generates the social card; verify it after deployment.
 - **Accessibility:** run an axe scan and a Lighthouse pass before linking from LinkedIn.
 

@@ -1,3 +1,5 @@
+import { withBase } from '@/lib/site'
+
 export default function Footer() {
   return (
     <footer style={{ borderTop: '1px solid var(--line)', marginTop: 'var(--space-8)' }}>
@@ -15,7 +17,7 @@ export default function Footer() {
       >
         <span>Software that outlasts its authors.</span>
         <a
-          href="/colophon/"
+          href={withBase('/colophon/')}
           style={{ color: 'var(--ink-secondary)', textDecoration: 'none' }}
         >
           Colophon

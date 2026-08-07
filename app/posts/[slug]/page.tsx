@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import { getPosts, getPost, formatDate } from '@/lib/content'
 import { getReadingTime } from '@/lib/reading'
-import { site } from '@/lib/site'
+import { site, absUrl } from '@/lib/site'
 import Markdown from '@/components/Markdown'
 import Badge from '@/components/Badge'
 import CopyLinkButton from '@/components/CopyLinkButton'
@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const post = getPost(slug)
   if (!post) return {}
-  const url = `${site.url}/posts/${post.slug}/`
+  const url = absUrl(`/posts/${post.slug}/`)
   return {
     title: `${post.title} — Palmshed`,
     description: post.hook,
@@ -37,7 +37,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     description: post.hook,
     datePublished: post.date,
     author: { '@type': 'Person', name: site.author.name, url: site.url },
-    url: `${site.url}/posts/${post.slug}/`,
+    url: absUrl(`/posts/${post.slug}/`),
   }
 
   return (

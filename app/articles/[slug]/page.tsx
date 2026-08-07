@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import { getArticle, getArticles, formatDate } from '@/lib/content'
 import { getReadingTime, extractToc } from '@/lib/reading'
-import { site } from '@/lib/site'
+import { site, absUrl } from '@/lib/site'
 import Markdown from '@/components/Markdown'
 import Badge from '@/components/Badge'
 import TableOfContents from '@/components/TableOfContents'
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const article = getArticle(slug)
   if (!article) return {}
-  const url = `${site.url}/articles/${article.slug}/`
+  const url = absUrl(`/articles/${article.slug}/`)
   return {
     title: `${article.title} — Palmshed`,
     description: article.intro,
@@ -55,7 +55,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     datePublished: article.date,
     author: { '@type': 'Person', name: site.author.name, url: site.url },
     publisher: { '@type': 'Person', name: site.author.name, url: site.url },
-    url: `${site.url}/articles/${article.slug}/`,
+    url: absUrl(`/articles/${article.slug}/`),
     keywords: article.tags.join(', '),
   }
 
