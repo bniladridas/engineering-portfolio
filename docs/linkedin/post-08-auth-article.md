@@ -19,4 +19,4 @@ New article, *Authentication Is a Foundation, Not a Feature*:
 
 Auth is infrastructure with a human face. Get the discipline right and the trust follows.
 
-https://palmshed.dev/articles/authentication-is-a-foundation-not-a-feature
+https://bniladridas.github.io/engineering-portfolio/articles/authentication-is-a-foundation-not-a-feature

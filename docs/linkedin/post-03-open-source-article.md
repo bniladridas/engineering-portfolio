@@ -21,4 +21,4 @@ My latest article, *Lessons From Open Source*, covers what the process actually 
 
 The code I contribute matters. The practice matters more.
 
-https://palmshed.dev/articles/lessons-from-open-source
+https://bniladridas.github.io/engineering-portfolio/articles/lessons-from-open-source

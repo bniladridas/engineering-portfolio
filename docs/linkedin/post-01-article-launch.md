@@ -21,4 +21,4 @@ Three things I keep coming back to:
 
 I hope it's useful to others who enjoy building systems that evolve over time.
 
-https://palmshed.dev/articles/building-software-that-lasts
+https://bniladridas.github.io/engineering-portfolio/articles/building-software-that-lasts

@@ -18,4 +18,4 @@ The honest version is different, and it's what my latest article is about:
 - Consistency beats volume. A weekly, truthful note beats a viral post that's never followed.
 - The record is the reward. It's documentation of your own growth.
 
-https://palmshed.dev/articles/building-in-public-honestly
+https://bniladridas.github.io/engineering-portfolio/articles/building-in-public-honestly
