@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" font-family="Inter, IBM Plex Sans, sans-serif">
+  <rect width="1200" height="480" fill="#ffffff"/>
+  <text x="80" y="60" font-size="28" font-weight="600" fill="#0d0d0d">Small decisions compound</text>
+  <text x="80" y="96" font-size="20" fill="#4b4b4b">A shortcut a day, or a deposit a day — the difference is the trajectory, not the size.</text>
+
+  <text x="80" y="180" font-size="20" font-weight="600" fill="#0d0d0d">One shortcut per week</text>
+  <line x1="80" y1="220" x2="320" y2="340" stroke="#e3e3e0" stroke-width="4"/>
+  <line x1="80" y1="220" x2="640" y2="400" stroke="#e3e3e0" stroke-width="4"/>
+  <text x="680" y="410" font-size="18" fill="#4b4b4b">unmaintainable</text>
+  <circle cx="80" cy="220" r="7" fill="#e3e3e0"/>
+  <circle cx="240" cy="300" r="7" fill="#e3e3e0"/>
+  <circle cx="420" cy="352" r="7" fill="#e3e3e0"/>
+
+  <text x="80" y="180" font-size="20" font-weight="600" fill="#1f883d">One deposit per week</text>
+  <path d="M80 220 C240 200 400 160 560 100 L640 60" fill="none" stroke="#1f883d" stroke-width="4"/>
+  <circle cx="240" cy="176" r="7" fill="#1f883d"/>
+  <circle cx="420" cy="120" r="7" fill="#1f883d"/>
+  <circle cx="640" cy="60" r="7" fill="#1f883d"/>
+  <text x="700" y="70" font-size="18" fill="#1f883d">maintainable</text>
+
+  <text x="80" y="440" font-size="18" fill="#4b4b4b">No single decision decides a codebase. The direction you aim them all at does.</text>
+</svg>

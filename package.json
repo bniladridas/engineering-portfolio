@@ -1,0 +1,11 @@
+{
+  "name": "engineering-portfolio",
+  "version": "1.0.0",
+  "description": "Version-controlled content library for the engineering portfolio.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "stats": "node scripts/stats.mjs"
+  }
+}

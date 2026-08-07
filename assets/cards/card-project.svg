@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" font-family="Inter, IBM Plex Sans, sans-serif">
+  <rect width="1200" height="900" fill="#ffffff"/>
+  <rect x="0" y="0" width="1200" height="900" fill="none" stroke="#e3e3e0" stroke-width="1"/>
+  <text x="96" y="140" font-size="20" font-weight="600" letter-spacing="3" fill="#4b4b4b">PROJECT</text>
+  <rect x="936" y="106" width="168" height="40" rx="20" fill="#e6f2ea"/>
+  <text x="1020" y="133" font-size="16" font-weight="600" letter-spacing="1" fill="#1f883d" text-anchor="middle">DART</text>
+  <text x="96" y="268" font-size="56" font-weight="600" fill="#0d0d0d">Palmshed</text>
+  <text x="96" y="452" font-size="30" fill="#4b4b4b">A developer tool for people who care</text>
+  <text x="96" y="496" font-size="30" fill="#4b4b4b">about maintainable output.</text>
+  <text x="96" y="664" font-size="24" fill="#4b4b4b">Does one job well. Errors that answer what,</text>
+  <text x="96" y="704" font-size="24" fill="#4b4b4b">where, and what to do. Boring code, on purpose.</text>
+  <line x1="96" y1="800" x2="1104" y2="800" stroke="#e3e3e0" stroke-width="1"/>
+  <text x="96" y="840" font-size="24" font-weight="500" fill="#1f883d">View project <tspan font-size="30">→</tspan></text>
+</svg>
