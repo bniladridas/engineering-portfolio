@@ -1,5 +1,5 @@
 ---
-title: Lessons From Open Source — article launch
+title: "Lessons From Open Source: article launch"
 slug: post-03-open-source-article
 date: 2026-07-15
 status: published
@@ -11,7 +11,7 @@ My first open source review came back with more comments than lines.
 
 It stung. Then I reread it and realized every comment was about the code, not about me. "This branch isn't reachable." "Can this fail?" "Naming."
 
-That separation — code from self — is the most valuable habit open source gave me.
+That separation (code from self) is the most valuable habit open source gave me.
 
 My latest article, *Lessons From Open Source*, covers what the process actually taught me:
 

@@ -1,7 +1,7 @@
 import { getCards } from '@/lib/content'
 import ContentCard from '@/components/ContentCard'
 
-export const metadata = { title: 'Featured — Palmshed' }
+export const metadata = { title: 'Featured · Palmshed' }
 export default function FeaturedPage() {
   const cards = getCards()
 
@@ -12,7 +12,7 @@ export default function FeaturedPage() {
         Featured
       </h1>
       <p style={{ color: 'var(--ink-secondary)', fontSize: 18, maxWidth: '52ch' }}>
-        The cards behind the featured section of the profile — articles, projects, and open source.
+        The cards behind the featured section of the profile: articles, projects, and open source.
       </p>
 
       <div

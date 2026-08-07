@@ -1,5 +1,5 @@
 ---
-title: Building Software That Lasts — article launch
+title: "Building Software That Lasts: article launch"
 slug: post-01-article-launch
 date: 2026-07-01
 status: published
@@ -17,7 +17,7 @@ Three things I keep coming back to:
 
 1. Boring, predictable code beats clever code. Every time.
 2. Interfaces outlast implementations. Spend your design energy on the boundary.
-3. Small decisions compound — good ones and bad ones alike.
+3. Small decisions compound: good ones and bad ones alike.
 
 I hope it's useful to others who enjoy building systems that evolve over time.
 

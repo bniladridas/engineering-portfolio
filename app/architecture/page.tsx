@@ -2,7 +2,7 @@ import { getArchNotes } from '@/lib/content'
 import { withBase } from '@/lib/site'
 import Badge from '@/components/Badge'
 
-export const metadata = { title: 'Architecture Notes — Palmshed' }
+export const metadata = { title: 'Architecture Notes · Palmshed' }
 
 function excerpt(content: string): string {
   const first = content

@@ -3,7 +3,7 @@ import ContentCard from '@/components/ContentCard'
 import Markdown from '@/components/Markdown'
 import Badge from '@/components/Badge'
 
-export const metadata = { title: 'Open Source — Palmshed' }
+export const metadata = { title: 'Open Source · Palmshed' }
 
 export default function OpenSourcePage() {
   const cards = getCards()
@@ -25,7 +25,7 @@ export default function OpenSourcePage() {
           {`
 ## Projects
 
-- **kit** — a command-line developer tool, built and maintained in public. [Repository](https://github.com/palmshed/kit)
+- **kit**: a command-line developer tool, built and maintained in public. [Repository](https://github.com/palmshed/kit)
 
 ## How I contribute
 

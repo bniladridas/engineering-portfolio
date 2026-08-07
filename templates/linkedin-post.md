@@ -11,15 +11,15 @@ hook: The single line that stops the scroll.
 
 ## Structure
 
-1. **Hook** — first line. A specific claim, a counterintuitive observation, or a small story. No throat-clearing.
-2. **The idea** — one idea, developed in a few short lines. Concrete beats abstract.
-3. **The payoff** — the "here's what I do now" part. People share posts they can apply.
-4. **The ask** — one line, low pressure: "What's your take?" or a link to the article.
+1. **Hook:** first line. A specific claim, a counterintuitive observation, or a small story. No throat-clearing.
+2. **The idea:** one idea, developed in a few short lines. Concrete beats abstract.
+3. **The payoff:** the "here's what I do now" part. People share posts they can apply.
+4. **The ask:** one line, low pressure: "What's your take?" or a link to the article.
 
 ## Rules
 
 - One idea per post. If there are two, pick the stronger.
 - Break long sentences. Short lines read better in the feed.
-- Format with line breaks every 1–2 sentences — the feed truncates at ~3 lines.
+- Format with line breaks every 1–2 sentences: the feed truncates at ~3 lines.
 - No hashtag spam. One or two at most, only if they add discovery.
 - Link the article in the last line, not buried in the middle.

@@ -23,4 +23,4 @@ slug: skills
 - Building in public
 
 **Guidance:**
-Keep the top list short — three to six skills. Recruiters and hiring managers read the first line. Move skills you've actually used recently to the top; drop the rest.
+Keep the top list short: three to six skills. Recruiters and hiring managers read the first line. Move skills you've actually used recently to the top; drop the rest.

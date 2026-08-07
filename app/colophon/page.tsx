@@ -1,6 +1,6 @@
 import Markdown from '@/components/Markdown'
 
-export const metadata = { title: 'Colophon — Palmshed' }
+export const metadata = { title: 'Colophon · Palmshed' }
 
 export default function ColophonPage() {
   return (
@@ -20,7 +20,7 @@ export default function ColophonPage() {
 ## Framework
 
 Next.js 15 with the App Router, React 19, and TypeScript. Every page is statically generated at
-build time — the content is read from the repo and rendered to plain HTML, so there is no runtime
+build time: the content is read from the repo and rendered to plain HTML, so there is no runtime
 server and nothing to maintain after deploy.
 
 ## Typography
@@ -29,7 +29,7 @@ server and nothing to maintain after deploy.
 - **IBM Plex Sans** for headings and display.
 - **IBM Plex Mono** for code.
 
-All fonts are self-hosted through \`next/font\` — no third-party requests, no layout shift.
+All fonts are self-hosted through \`next/font\`. No third-party requests, no layout shift.
 
 ## Color palette
 
@@ -58,7 +58,7 @@ new writing without depending on any platform.
 
 ## Diagrams
 
-All diagrams are hand-authored inline SVG — the same style as the site, drawn as text files so
+All diagrams are hand-authored inline SVG, drawn in the same style as the site as text files so
 they can be reviewed and changed in a diff.
 
 ## Hosting
@@ -70,7 +70,7 @@ and no database.
 
 A static site is durable. It costs nothing to run, cannot break at runtime, and the content is
 version-controlled like the software it documents. The point of this site is to let the work stay
-the main event — a site that needs constant maintenance would compete with the work instead of
+the main event. A site that needs constant maintenance would compete with the work instead of
 documenting it.
 `}
         </Markdown>

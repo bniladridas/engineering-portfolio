@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.0.0 — 2026-08-07
+## v1.0.0 · 2026-08-07
 
 First stable release of the Palmshed engineering portfolio.
 
@@ -8,7 +8,7 @@ First stable release of the Palmshed engineering portfolio.
 
 - Next.js 15 App Router, fully static export.
 - Deployed to GitHub Pages via GitHub Actions on every push to `main`.
-- Configurable `basePath` (`NEXT_PUBLIC_BASE_PATH`) — serves the GitHub Pages
+- Configurable `basePath` (`NEXT_PUBLIC_BASE_PATH`): serves the GitHub Pages
   project path today, and a custom domain root later, with no code changes.
 - Client-side search over a build-time index, RSS feed, XML sitemap, JSON-LD
   structured data, and a build-time generated Open Graph image (`og.png`).

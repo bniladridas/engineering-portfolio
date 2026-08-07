@@ -11,7 +11,7 @@ If I find a variable named `data` in my own code, I treat it as a confession.
 
 I didn't know what it was when I wrote it, so I gave the reader nothing to work with. Not `pendingInvites`. Not `inboxRows`. Just... `data`.
 
-Names are where the reader spends their first few seconds. A good name answers the first question — *what is this?* — before any effort is spent.
+Names are where the reader spends their first few seconds. A good name answers the first question (*what is this?*) before any effort is spent.
 
 A few rules I now keep:
 

@@ -8,10 +8,10 @@ A library of image generation prompts for portfolio assets, all following the de
 
 ## Index
 
-- `cards.md` — prompts for portfolio card images
-- `banner.md` — prompts for the LinkedIn banner
-- `avatar.md` — prompts for the profile avatar
-- `diagrams.md` — prompts for conceptual article imagery
+- `cards.md`: prompts for portfolio card images
+- `banner.md`: prompts for the LinkedIn banner
+- `avatar.md`: prompts for the profile avatar
+- `diagrams.md`: prompts for conceptual article imagery
 
 ## Style anchor
 

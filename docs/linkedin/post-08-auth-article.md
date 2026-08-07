@@ -1,5 +1,5 @@
 ---
-title: Authentication Is a Foundation — article launch
+title: "Authentication Is a Foundation: article launch"
 slug: post-08-auth-article
 date: 2026-08-19
 status: published
@@ -15,7 +15,7 @@ New article, *Authentication Is a Foundation, Not a Feature*:
 
 - The boring list is load-bearing: slow salted hashing, standard libraries, short-lived revocable tokens, careful rate limiting.
 - Keep three questions separate: who are you (authentication), what may you do (authorization), who is this durably (identity).
-- Failure modes are a feature — design the forgotten-password path like you designed the login path.
+- Failure modes are a feature: design the forgotten-password path like you designed the login path.
 
 Auth is infrastructure with a human face. Get the discipline right and the trust follows.
 

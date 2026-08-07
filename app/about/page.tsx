@@ -3,7 +3,7 @@ import { toPlainText } from '@/lib/plain'
 import Markdown from '@/components/Markdown'
 import CopyableBlock from '@/components/CopyableBlock'
 
-export const metadata = { title: 'About — Palmshed' }
+export const metadata = { title: 'About · Palmshed' }
 
 const LABELS: Record<string, string> = {
   headline: 'Headline',

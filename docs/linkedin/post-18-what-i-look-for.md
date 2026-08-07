@@ -13,7 +13,7 @@ Job postings are promises. The code is the truth. Before I join a team, I try to
 
 1. **Small diffs.** Are PRs reviewable? Small diffs mean the team has actually figured out how to ship safely.
 2. **Honest docs.** Is there a README that respects your time? Docs that live next to the code and stay current?
-3. **Review culture.** Is feedback concrete, technical, and kind — or a rubber stamp? A rubber stamp team ships twice the bugs and learns half as much.
+3. **Review culture.** Is feedback concrete, technical, and kind, or a rubber stamp? A rubber stamp team ships twice the bugs and learns half as much.
 4. **Tests that read like specifications.** Do the tests tell you what the system does? That's the sign of code written to be understood.
 
 Maintainability isn't an abstract virtue. It's how a team behaves every day.

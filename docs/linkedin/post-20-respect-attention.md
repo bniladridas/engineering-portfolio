@@ -9,7 +9,7 @@ hook: "The most respectful thing you can do for the engineer you'll be in six mo
 
 The most respectful thing you can do for the engineer you'll be in six months is leave fewer things to guess.
 
-I used to write code for the reviewer — impressively — and leave nothing for the reader. Six months later, that reader was me, and I didn't know why I'd done anything.
+I used to write code for the reviewer (impressively) and leave nothing for the reader. Six months later, that reader was me, and I didn't know why I'd done anything.
 
 Now I write for the future me, who:
 

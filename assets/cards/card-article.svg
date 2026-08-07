@@ -8,7 +8,7 @@
   <text x="96" y="336" font-size="56" font-weight="600" fill="#0d0d0d">That Lasts</text>
   <text x="96" y="452" font-size="30" fill="#4b4b4b">Open source systems, developer tools,</text>
   <text x="96" y="496" font-size="30" fill="#4b4b4b">and software architecture.</text>
-  <text x="96" y="664" font-size="24" fill="#4b4b4b">Why maintainability beats cleverness — interfaces that</text>
+  <text x="96" y="664" font-size="24" fill="#4b4b4b">Why maintainability beats cleverness: interfaces that</text>
   <text x="96" y="704" font-size="24" fill="#4b4b4b">outlast implementations, and code the next engineer</text>
   <text x="96" y="744" font-size="24" fill="#4b4b4b">can understand tomorrow.</text>
   <line x1="96" y1="800" x2="1104" y2="800" stroke="#e3e3e0" stroke-width="1"/>

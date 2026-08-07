@@ -24,7 +24,7 @@ Small pill for eyebrows and categories.
 ## Link
 
 - Color: `--green`. Hover: underline, no color shift.
-- Distinguishable from body text at a glance — don't rely on color alone; underline on hover is the minimum.
+- Distinguishable from body text at a glance. Don't rely on color alone; underline on hover is the minimum.
 
 ## Card
 

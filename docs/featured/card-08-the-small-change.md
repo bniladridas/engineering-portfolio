@@ -12,7 +12,7 @@ tag: article
 **Subtitle:** Shipping in pieces small enough that nothing breaks quietly.
 
 **Description:**
-Big changes are hard to review, hard to roll back, and hard to reason about. The small change is the unit of safe engineering — and the habit that builds team trust.
+Big changes are hard to review, hard to roll back, and hard to reason about. The small change is the unit of safe engineering, and the habit that builds team trust.
 
 **Link:** https://palmshed.dev/articles/the-art-of-the-small-change
 

@@ -12,7 +12,7 @@ tag: article
 **Subtitle:** Structure as communication.
 
 **Description:**
-Every rename and extraction is a sentence in a letter to the person who maintains the code next. A case for treating structure as documentation — and for refactoring continuously, not in big-bang rewrites.
+Every rename and extraction is a sentence in a letter to the person who maintains the code next. A case for treating structure as documentation, and for refactoring continuously, not in big-bang rewrites.
 
 **Link:** https://palmshed.dev/articles/refactoring-as-communication
 

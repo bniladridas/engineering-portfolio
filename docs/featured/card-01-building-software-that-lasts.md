@@ -12,7 +12,7 @@ tag: article
 **Subtitle:** Open source systems, developer tools, and software architecture.
 
 **Description:**
-An essay on why maintainability beats cleverness — interfaces that outlast implementations, the compounding effect of small decisions, and software that the next engineer can understand.
+An essay on why maintainability beats cleverness: interfaces that outlast implementations, the compounding effect of small decisions, and software that the next engineer can understand.
 
 **Link:** https://palmshed.dev/articles/building-software-that-lasts
 

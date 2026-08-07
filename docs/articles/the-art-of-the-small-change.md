@@ -6,7 +6,7 @@ status: published
 tags: [engineering-practice, workflows, review]
 intro: Big changes are hard to review, hard to roll back, and hard to reason about. The small change is the unit of safe engineering.
 references:
-  - label: kit — structure change, then behavior change, in two commits
+  - label: "kit: structure change, then behavior change, in two commits"
     url: kit/pulls
 ---
 
@@ -14,7 +14,7 @@ references:
 
 Big changes are hard to review, hard to roll back, and hard to reason about. The small change is the unit of safe engineering.
 
-I used to think a skilled engineer was someone who could land large, ambitious changes in a single move. I was measuring the wrong thing. The engineers I most respect ship the same amount of work as everyone else — in pieces small enough that nothing can break quietly.
+I used to think a skilled engineer was someone who could land large, ambitious changes in a single move. I was measuring the wrong thing. The engineers I most respect ship the same amount of work as everyone else: in pieces small enough that nothing can break quietly.
 
 ## Why big changes break silently
 
@@ -31,11 +31,11 @@ The change that taught me this was adding layered config to kit. It was one feat
 1. First PR: rename the config type and move it into its own module. Zero behavior change. Reviewed and merged on its own.
 2. Second PR: add the file layer on top of the existing defaults. One new behavior, landing on clean seams.
 
-Two small, individually reviewable diffs. The first one looked trivial — which is the point. The second one was small enough that a reviewer could actually check the precedence logic instead of skimming past it.
+Two small, individually reviewable diffs. The first one looked trivial, which is the point. The second one was small enough that a reviewer could actually check the precedence logic instead of skimming past it.
 
-![Split the change — structure first, behavior second, and the repo stays green the whole time](/diagrams/diagram-small-change.svg)
+![Split the change: structure first, behavior second, and the repo stays green the whole time](/diagrams/diagram-small-change.svg)
 
-The technique that unlocks this is finding the seam where the work can be divided. Usually the seam is a behavior change versus a structure change. Rename first, in one commit, with no behavior change — review that, merge it. Then change the behavior in the next commit. Two small, reviewable, individually reversible changes instead of one scary diff.
+The technique that unlocks this is finding the seam where the work can be divided. Usually the seam is a behavior change versus a structure change. Rename first, in one commit, with no behavior change. Review that, merge it. Then change the behavior in the next commit. Two small, reviewable, individually reversible changes instead of one scary diff.
 
 ## Land in stages that always work
 
@@ -55,14 +55,14 @@ My practical habits are unglamorous:
 
 - **One concern per commit.** If a commit needs two paragraphs in the message, split it.
 - **Structure before behavior.** When a change is both, land the structural half first, alone.
-- **Roll forward, not back.** If a small change goes wrong, the fix is another small change — the whole point is that nothing ever breaks enough to need a heroic revert.
+- **Roll forward, not back.** If a small change goes wrong, the fix is another small change: the whole point is that nothing ever breaks enough to need a heroic revert.
 - **Ship the boring part first.** The parts that are easy to describe and verify become the commits that keep the review short.
 
 ## Small changes build confidence
 
 The quiet superpower of small changes is trust. Over time, my own code and the code of the teams I work with earn a reputation: changes are safe, reviews are meaningful, and history is readable. That trust changes how people behave. They stop guarding against regressions and start shipping improvements.
 
-That is the compounding return of the small change. It doesn't just protect today's deploy. It builds a codebase and a team where change is cheap — and cheap change is the entire game.
+That is the compounding return of the small change. It doesn't just protect today's deploy. It builds a codebase and a team where change is cheap, and cheap change is the entire game.
 
 ## Takeaway
 

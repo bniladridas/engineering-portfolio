@@ -44,10 +44,10 @@ The scaffold's card design spec, expanded into a reusable system.
 
 ## Variants
 
-- **Article card** — eyebrow `ARTICLE`, green tag = topic.
-- **Project card** — eyebrow `PROJECT`, tag = primary language or stack.
-- **Open source card** — eyebrow `OPEN SOURCE`, tag = repository.
-- **Link card** — title + subtitle only, for short links.
+- **Article card:** eyebrow `ARTICLE`, green tag = topic.
+- **Project card:** eyebrow `PROJECT`, tag = primary language or stack.
+- **Open source card:** eyebrow `OPEN SOURCE`, tag = repository.
+- **Link card:** title + subtitle only, for short links.
 
 ## Ratio
 

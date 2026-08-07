@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!note) return {}
   const url = absUrl(`/architecture/${note.slug}/`)
   return {
-    title: `${note.title} — Palmshed`,
+    title: `${note.title} · Palmshed`,
     description: note.content.slice(0, 160),
     alternates: { canonical: url },
     openGraph: {

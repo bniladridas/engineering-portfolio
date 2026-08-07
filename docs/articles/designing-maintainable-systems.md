@@ -4,17 +4,17 @@ slug: designing-maintainable-systems
 date: 2026-07-22
 status: published
 tags: [architecture, design, maintainability]
-intro: The architecture that survives is the one that anticipates change — not by predicting the future, but by making change cheap.
+intro: The architecture that survives is the one that anticipates change, not by predicting the future, but by making change cheap.
 references:
-  - label: Auth service — three subsystems, one stable contract
+  - label: "Auth service: three subsystems, one stable contract"
     url: auth/blob/main/ARCHITECTURE.md
-  - label: kit — layered config design note
+  - label: "kit: layered config design note"
     url: kit/blob/main/docs/kit_config.md
 ---
 
 # Designing Maintainable Systems
 
-The architecture that survives is the one that anticipates change — not by predicting the future, but by making change cheap.
+The architecture that survives is the one that anticipates change, not by predicting the future, but by making change cheap.
 
 Every design meeting starts with the same question: what should this system look like? The useful follow-up question is rarely asked: what should this system *become*? Systems are never finished. They are changed, extended, repaired, and occasionally re-architected. The only design goal that matters is making those changes safe and cheap.
 
@@ -26,23 +26,23 @@ Maintainable design flips the assumption. It starts from "requirements will chan
 
 - **Boundaries between subsystems.** Code that changes at different speeds should not be tangled together. The seam between them is where change gets absorbed.
 - **Small, composable pieces.** A system built from small pieces can be rearranged. A system built from large ones can only be replaced.
-- **Explicit contracts.** The public shape of a component — its inputs, outputs, and failure modes — is the stable part. Everything behind it is free to evolve.
+- **Explicit contracts.** The public shape of a component (its inputs, outputs, and failure modes) is the stable part. Everything behind it is free to evolve.
 
 ## Coupling is the tax on change
 
 Every dependency is a promise. When component A depends on component B, any change to B risks A. Dependencies are not free; they are a recurring tax, paid on every future change to either side.
 
-The auth service I built was designed around one seam from the start: the token store. Everything that stores or reads tokens goes through a single adapter. When the team moved from a self-hosted store to a managed one, the migration was a single file — one adapter swapped for another, the contract unchanged. The alternative, call sites touching the store directly, would have made that migration a two-week project instead of a two-day one.
+The auth service I built was designed around one seam from the start: the token store. Everything that stores or reads tokens goes through a single adapter. When the team moved from a self-hosted store to a managed one, the migration was a single file: one adapter swapped for another, the contract unchanged. The alternative, call sites touching the store directly, would have made that migration a two-week project instead of a two-day one.
 
-![The boundary absorbs change — a stable interface between volatile callers and volatile implementation](/diagrams/diagram-boundary.svg)
+![The boundary absorbs change: a stable interface between volatile callers and volatile implementation](/diagrams/diagram-boundary.svg)
 
-The skill is not eliminating dependencies — that's impossible — but placing them deliberately. Couple to stable things: interfaces, data shapes, contracts. Couple to volatile things only through a narrow seam. When the underlying library changes, one adapter absorbs it instead of a hundred call sites.
+The skill is not eliminating dependencies (that's impossible) but placing them deliberately. Couple to stable things: interfaces, data shapes, contracts. Couple to volatile things only through a narrow seam. When the underlying library changes, one adapter absorbs it instead of a hundred call sites.
 
 I look for the places where a change forces touching many files. Each such place is a design smell, not a testament to thoroughness. It means the boundary is in the wrong spot.
 
 ## Predictable beats clever
 
-There is a kind of architecture that looks beautiful in a diagram and is brutal to work in. Everything is abstracted, generic, and consistent — and nothing is findable. To change one behavior, I must trace through six layers of indirection.
+There is a kind of architecture that looks beautiful in a diagram and is brutal to work in. Everything is abstracted, generic, and consistent, and nothing is findable. To change one behavior, I must trace through six layers of indirection.
 
 The maintainable system favors predictability over elegance. I want to open a file and guess what it does, from the name, without reading a third of it. That predictability comes from consistency: same shape for same jobs, same conventions, same failure modes. Novelty is the enemy of maintainability. Every time a system does something differently, the next reader pays.
 

@@ -4,7 +4,7 @@ title: Card Prompts
 
 # Card Prompts
 
-Each card is a wide 3:4 or 16:10 image. The design system keeps the card white with black text; the *image* can carry a subtle, structured motif — never a second color.
+Each card is a wide 3:4 or 16:10 image. The design system keeps the card white with black text; the *image* can carry a subtle, structured motif, never a second color.
 
 ## 1. Building Software That Lasts
 
@@ -16,7 +16,7 @@ Each card is a wide 3:4 or 16:10 image. The design system keeps the card white w
 
 ## 3. Engineering in Practice
 
-> Flat vector illustration of layered abstract architecture — a stack of clean, aligned blocks with a single green seam running vertically through them, black and grey line work.
+> Flat vector illustration of layered abstract architecture, a stack of clean, aligned blocks with a single green seam running vertically through them, black and grey line work.
 
 ## 4. Palmshed
 

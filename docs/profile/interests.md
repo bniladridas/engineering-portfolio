@@ -12,4 +12,4 @@ slug: interests
 - Flutter, authentication systems, backend services
 
 **Guidance:**
-Follow people and topics that match these interests so the feed stays relevant and the profile reads as genuinely engaged. Engage honestly — likes and comments should add information, not just signal.
+Follow people and topics that match these interests so the feed stays relevant and the profile reads as genuinely engaged. Engage honestly: likes and comments should add information, not just signal.

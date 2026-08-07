@@ -302,7 +302,7 @@ button:focus-visible {
   }
 }
 
-/* highlight.js — GitHub light palette, tuned to the design system */
+/* highlight.js: GitHub light palette, tuned to the design system */
 .hljs {
   color: #24292e;
   background: transparent;

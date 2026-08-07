@@ -22,7 +22,7 @@
   <line x1="580" y1="235" x2="660" y2="320" stroke="#0d0d0d" stroke-width="3" stroke-dasharray="6 6"/>
   <rect x="680" y="300" width="200" height="70" rx="10" fill="#ffffff" stroke="#e3e3e0" stroke-width="3"/>
   <text x="780" y="340" font-size="18" font-weight="600" fill="#4b4b4b" text-anchor="middle">supporting code</text>
-  <text x="780" y="362" font-size="15" fill="#4b4b4b" text-anchor="middle">defer — skim later</text>
+  <text x="780" y="362" font-size="15" fill="#4b4b4b" text-anchor="middle">defer, skim later</text>
 
   <text x="80" y="440" font-size="18" fill="#4b4b4b">The call graph is the skeleton; deep reading is only for the bones that carry weight.</text>
 </svg>

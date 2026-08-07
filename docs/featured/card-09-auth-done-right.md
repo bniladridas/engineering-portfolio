@@ -12,7 +12,7 @@ tag: article
 **Subtitle:** Authentication as a foundation, not a feature.
 
 **Description:**
-Auth mistakes are invisible when made and expensive when found. How I keep the boring list load-bearing — hashing, tokens, rate limiting, failure modes — and why it's a foundation, not a feature.
+Auth mistakes are invisible when made and expensive when found. How I keep the boring list load-bearing: hashing, tokens, rate limiting, failure modes, and why it's a foundation, not a feature.
 
 **Link:** https://palmshed.dev/articles/authentication-is-a-foundation-not-a-feature
 

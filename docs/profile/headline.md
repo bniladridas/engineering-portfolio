@@ -9,7 +9,7 @@ slug: headline
 Software Engineer | Open Source | Developer Tools | Systems
 
 **Alt A:**
-Software Engineer — Developer Tools & Open Source
+Software Engineer: Developer Tools & Open Source
 
 **Alt B:**
 Engineer building maintainable systems, developer tooling, and open source.

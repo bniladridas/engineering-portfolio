@@ -9,7 +9,7 @@ slug: open-to-work
 Open to software engineering roles: maintainable systems, developer tools, open source.
 
 **In the about section, if recruiting:**
-"Open to roles where I can build maintainable systems, sharpen developer tools, and contribute to open source — with a team that treats code review and documentation as engineering."
+"Open to roles where I can build maintainable systems, sharpen developer tools, and contribute to open source, with a team that treats code review and documentation as engineering."
 
 **Guidance:**
 - Turn on the Open to Work badge only when actively looking; it reads as noise otherwise.

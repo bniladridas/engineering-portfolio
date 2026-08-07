@@ -17,9 +17,9 @@ That is the entire skill of giving feedback:
 - Suggest the alternative.
 - Say why.
 
-"Use the helper here instead — it already handles the null case." That's it. It's concrete, kind, and specific.
+"Use the helper here instead: it already handles the null case." That's it. It's concrete, kind, and specific.
 
-Feedback that reads like this grows people and ships better code. Feedback that judges — "this is sloppy," "you didn't think this through" — grows defensiveness.
+Feedback that reads like this grows people and ships better code. Feedback that judges ("this is sloppy," "you didn't think this through") grows defensiveness.
 
 I've stolen that format for every review I write since.
 

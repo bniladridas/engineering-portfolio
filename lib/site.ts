@@ -1,6 +1,6 @@
 export const site = {
   name: 'Palmshed',
-  title: 'Palmshed — Software Engineer',
+  title: 'Palmshed · Software Engineer',
   description:
     'Maintainable systems, developer tools, and open source. Software engineering portfolio and writing.',
   // Origin only (no path). Set NEXT_PUBLIC_SITE_URL when deploying somewhere

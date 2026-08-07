@@ -4,7 +4,7 @@ import { formatDate } from '@/lib/content'
 import Markdown from '@/components/Markdown'
 import Badge from '@/components/Badge'
 
-export const metadata = { title: 'Now — Palmshed' }
+export const metadata = { title: 'Now · Palmshed' }
 
 export default function NowPage() {
   const content = readFileSync(join(process.cwd(), 'docs', 'now.md'), 'utf8')

@@ -1,6 +1,6 @@
 # Engineering Portfolio
 
-A version-controlled content library **and** a Next.js site for my public engineering presence: long-form articles, LinkedIn posts, portfolio cards, profile copy, design assets, and image prompts — all in one reusable source of truth.
+A version-controlled content library **and** a Next.js site for my public engineering presence: long-form articles, LinkedIn posts, portfolio cards, profile copy, design assets, and image prompts. All in one reusable source of truth.
 
 Everything here is production content, not placeholders. When a new article or asset is ready to publish, you pick the next completed piece instead of starting from scratch.
 
@@ -8,7 +8,7 @@ Everything here is production content, not placeholders. When a new article or a
 
 ```
 engineering-portfolio/
-├── README.md              # this file — how the library works
+├── README.md              # this file: how the library works
 ├── package.json           # scripts for dev, build, validation, and stats
 ├── app/                   # Next.js site (App Router)
 │   ├── page.tsx           # home
@@ -44,7 +44,7 @@ engineering-portfolio/
 
 ## Voice
 
-Short sentences. Concrete and specific. No filler. First person, but humble — claims are demonstrated, not asserted. Engineering honesty over marketing polish.
+Short sentences. Concrete and specific. No filler. First person, but humble. Claims are demonstrated, not asserted. Engineering honesty over marketing polish.
 
 ## Run the site
 
@@ -62,16 +62,16 @@ static export and publishes it to GitHub Pages on every push to `main`.
 
 The workflow sets two build-time env vars so the static export is path-aware:
 
-- `NEXT_PUBLIC_BASE_PATH=/<repo>` — prefixes every internal link and asset URL (via `basePath` +
+- `NEXT_PUBLIC_BASE_PATH=/<repo>`: prefixes every internal link and asset URL (via `basePath` +
   `assetPrefix`), which is required because GitHub Pages serves project sites under
   `/engineering-portfolio/` rather than the domain root.
-- `NEXT_PUBLIC_SITE_URL=https://<user>.github.io` — origin used for canonical URLs, sitemap, RSS,
+- `NEXT_PUBLIC_SITE_URL=https://<user>.github.io`: origin used for canonical URLs, sitemap, RSS,
   and Open Graph.
 
 One-time setup (repo settings → Pages):
 
 1. Set **Source** to **GitHub Actions**.
-2. Push to `main` — the workflow builds `out/` and deploys it.
+2. Push to `main`: the workflow builds `out/` and deploys it.
 3. If this repo is private, GitHub Pages requires a paid plan; make the repo public (or upgrade)
    for the deployment to succeed.
 
@@ -80,8 +80,8 @@ Custom domain (optional):
 - When the site moves to a real domain (e.g. `notes.palmshed.dev`), add a `CNAME` file at the repo
   root containing the domain, point the DNS record at GitHub Pages, and drop the two env vars from
   the workflow (or set `NEXT_PUBLIC_BASE_PATH=` empty). The codebase defaults to domain-root URLs,
-  so no code changes are needed — the switch is a single environment variable.
-- Until then, no `CNAME` is needed — the site lives at `https://<user>.github.io/engineering-portfolio/`.
+  so no code changes are needed. The switch is a single environment variable.
+- Until then, no `CNAME` is needed. The site lives at `https://<user>.github.io/engineering-portfolio/`.
 
 `404.html` is generated automatically by the static export.
 
@@ -91,7 +91,7 @@ Content lives in `docs/` and is read at build time. To publish:
 
 1. Add an article: copy `templates/article.md` into `docs/articles/`, fill it in, and add a matching post in `docs/linkedin/`.
 2. Diagrams: drop an SVG into `assets/diagrams/`, then reference it in the article as `![caption](/diagrams/name.svg)`.
-3. `npm run build` — the site regenerates automatically.
+3. `npm run build`: the site regenerates automatically.
 
 ## Utilities
 
@@ -101,7 +101,7 @@ npm run stats        # content inventory and word counts
 npm run typecheck    # TypeScript check
 ```
 
-## Before you publish — checklist
+## Before you publish: checklist
 
 - **Real URLs:** article `references:` point at the real repos under `github.com/palmshed` (the `kit` CLI and the `auth` platform) via `site.github` in `lib/site.ts`. Verify links on the live site after deployment.
 - **Site URL:** set `NEXT_PUBLIC_SITE_URL` (used for canonical URLs, sitemap, RSS, OG images). When

@@ -21,6 +21,6 @@ slug: banner-spec
 - "Software that outlasts its authors."
 - "Maintainable systems. Developer tools. Open source."
 
-**Text is secondary.** The banner should read as a calm, structured surface — the same aesthetic as the rest of the profile.
+**Text is secondary.** The banner should read as a calm, structured surface: the same aesthetic as the rest of the profile.
 
 See `prompts/` for image prompts and `assets/logos/` for the Palmshed mark.

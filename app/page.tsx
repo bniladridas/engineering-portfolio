@@ -57,7 +57,7 @@ export default function Home() {
           >
             The longer I build software, the less I believe writing code is the difficult part.
             Keeping software understandable, maintainable, and adaptable is. That belief shows up in
-            everything I make — systems, tools, and open source.
+            everything I make: systems, tools, and open source.
           </p>
           <div style={{ display: 'flex', gap: 'var(--space-4)' }}>
             <a href={withBase(`/articles/${latest.slug}/`)} className="button button--primary">
@@ -169,7 +169,7 @@ export default function Home() {
             Built and maintained in public
           </h2>
           <p style={{ color: 'var(--ink-secondary)', fontSize: 18 }}>
-            Palmshed is developed in the open — the code, the design notes, and the mistakes.
+            Palmshed is developed in the open: the code, the design notes, and the mistakes.
             Building in public changed how I work, and the practice matters more than the code.
           </p>
           <div style={{ display: 'flex', gap: 'var(--space-4)', marginTop: 'var(--space-5)' }}>
@@ -191,7 +191,7 @@ export default function Home() {
           </h2>
           <p style={{ color: 'var(--ink-secondary)', fontSize: 18 }}>
             I write about maintainable systems and developer tools, and I&rsquo;m happy to talk
-            about both — systems design, code review, or building in public.
+            about both: systems design, code review, or building in public.
           </p>
           <div style={{ display: 'flex', gap: 'var(--space-4)', marginTop: 'var(--space-5)' }}>
             <a href="mailto:hello@palmshed.dev" className="button button--primary">

@@ -1,11 +1,11 @@
 ---
-title: CLI design — the interface is the product
+title: "CLI design: the interface is the product"
 slug: cli-design
 date: 2026-07-02
 topic: cli-design
 ---
 
-# CLI design — the interface is the product
+# CLI design: the interface is the product
 
 A CLI has no dashboard to hide behind. Every decision is visible in the first five seconds a user spends with it: the help output, the error message, the exit code. Those five seconds decide whether the tool gets a second chance.
 
@@ -23,11 +23,11 @@ A CLI's contract has four parts, and all four are part of the design, not aftert
 - **Do one thing, name it a verb.** `palmshed build`, not `palmshed --action=build`. Commands are verbs; flags are adverbs.
 - **No prompts in a pipeline.** A tool must never hang waiting for input when its stdout is not a TTY. If a prompt is needed, it fails fast with an error telling the caller to pass the flag.
 - **Progress goes to stderr.** `stdout` is data; `stderr` is the story. Piping the tool into `jq` must not surface progress bars.
-- **Errors are the interface.** The error message is where users learn the tool's mental model. "Invalid value for format" teaches nothing; "format must be one of json, yaml, toml — got json5" teaches the model.
+- **Errors are the interface.** The error message is where users learn the tool's mental model. "Invalid value for format" teaches nothing; "format must be one of json, yaml, toml: got json5" teaches the model.
 - **Defaults are conservative.** Nothing is overwritten, nothing remote happens without opt-in, and the tool never mutates the user's config.
 
 ## The escape hatch
 
 The most important design element is the one users reach for when stuck: a flag that overrides the config file for one run. The escape hatch turns a blocked user into an unblocked user, and it teaches the layering model at the exact moment it matters.
 
-CLI design is product design. The commands, the help text, and the errors are the whole user experience — they deserve the same attention as any feature.
+CLI design is product design. The commands, the help text, and the errors are the whole user experience: they deserve the same attention as any feature.

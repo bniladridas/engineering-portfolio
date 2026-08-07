@@ -1,5 +1,5 @@
 ---
-title: Card title — one line
+title: Card title (one line)
 subtitle: One supporting line
 link: /path-or-url
 tag: article | project | open-source | link

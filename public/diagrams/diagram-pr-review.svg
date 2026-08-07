@@ -26,7 +26,7 @@
   <line x1="960" y1="240" x2="960" y2="340" stroke="#0d0d0d" stroke-width="3"/>
   <line x1="960" y1="340" x2="180" y2="340" stroke="#0d0d0d" stroke-width="3"/>
   <line x1="180" y1="340" x2="180" y2="240" stroke="#0d0d0d" stroke-width="3"/>
-  <text x="570" y="362" font-size="15" fill="#4b4b4b" text-anchor="middle">the cycle repeats — each loop makes the next contribution easier</text>
+  <text x="570" y="362" font-size="15" fill="#4b4b4b" text-anchor="middle">the cycle repeats. each loop makes the next contribution easier</text>
 
   <text x="80" y="440" font-size="18" fill="#4b4b4b">Translate, don't gatekeep. The repository that grows contributors is the one that treats strangers' time as precious.</text>
 </svg>

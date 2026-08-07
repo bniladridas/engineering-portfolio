@@ -19,6 +19,6 @@ I read tests before I read implementations. When I'm about to touch code, its te
 
 And when tests are missing or unreadable, that's information too. It means the code wasn't written to be understood or changed safely.
 
-The test that reads like a specification is the best documentation a codebase has — because it can't drift.
+The test that reads like a specification is the best documentation a codebase has, because it can't drift.
 
 It either passes, or it lies to your face.

@@ -21,7 +21,7 @@
 
   <rect x="440" y="60" width="600" height="304" rx="12" fill="#ffffff" stroke="#e3e3e0" stroke-width="2"/>
   <text x="472" y="104" font-size="18" font-weight="600" fill="#0d0d0d">Why this order</text>
-  <text x="472" y="142" font-size="16" fill="#4b4b4b">· Flags change one run — never committed, never shipped.</text>
+  <text x="472" y="142" font-size="16" fill="#4b4b4b">· Flags change one run, never committed, never shipped.</text>
   <text x="472" y="174" font-size="16" fill="#4b4b4b">· Environment varies per machine and carries secrets.</text>
   <text x="472" y="206" font-size="16" fill="#4b4b4b">· The file is checked in: stable, reviewable, shared.</text>
   <text x="472" y="238" font-size="16" fill="#4b4b4b">· Defaults exist so every layer is optional.</text>

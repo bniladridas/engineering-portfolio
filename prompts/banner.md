@@ -21,6 +21,6 @@ LinkedIn banner, 1584 × 396 px (export at 2x). Concept from `docs/profile/banne
 
 ## Post-process
 
-- Safe zone: keep all text and the mark within the center 75% — the profile photo overlays the bottom-left corner.
+- Safe zone: keep all text and the mark within the center 75%. The profile photo overlays the bottom-left corner.
 - Confirm the accent green is exactly `#1f883d` and the grid stays barely visible (about 5% opacity).
 - If the model adds a second color or a busy texture, reject and rerun with the negative prompt.

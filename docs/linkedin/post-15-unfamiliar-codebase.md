@@ -15,9 +15,9 @@ My routine:
 
 1. Find the entry points. What does the user actually do first?
 2. Trace the call graph. What does each entry point reach? That skeleton is 80% of the understanding.
-3. Read the tests. They show how the code is *actually* used — more honestly than any comment.
+3. Read the tests. They show how the code is *actually* used, more honestly than any comment.
 4. Deep-read only the load-bearing functions. Defer the rest.
 
-Then, when I make my first change, I make it small — and I read it as a way to learn, not just to ship.
+Then, when I make my first change, I make it small, and I read it as a way to learn, not just to ship.
 
 An engineer who can read a new codebase is an engineer who can work anywhere. It's a skill, not a talent. It improves with practice.

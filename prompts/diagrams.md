@@ -4,7 +4,7 @@ title: Diagram Prompts
 
 # Diagram Prompts
 
-Conceptual article imagery — not technical diagrams (use the SVGs in `assets/diagrams/` for those), but visual metaphors.
+Conceptual article imagery: not technical diagrams (use the SVGs in `assets/diagrams/` for those), but visual metaphors.
 
 ## 1. Interfaces outlast implementations
 

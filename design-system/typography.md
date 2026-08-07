@@ -36,7 +36,7 @@ slug: typography
 - **Line height 1.5** for body, **1.2** for headings.
 - **Max measure ~66ch** for body copy. Long lines tire the reader.
 - **Use weight for hierarchy, not size alone.** 600 on dark text reads as a heading at small sizes.
-- **Uppercase micro-labels** (letterspaced) for eyebrows like `ARTICLE`, `OPEN SOURCE` — sparingly.
+- **Uppercase micro-labels** (letterspaced) for eyebrows like `ARTICLE`, `OPEN SOURCE`: sparingly.
 
 ## Voice in type
 

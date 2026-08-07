@@ -12,7 +12,7 @@ tag: article
 **Subtitle:** Architecture designed for the changes you haven't imagined yet.
 
 **Description:**
-Systems are never finished. The architecture that survives makes change cheap — boundaries where volatility lives, coupling to interfaces, and predictable structure over clever abstraction.
+Systems are never finished. The architecture that survives makes change cheap: boundaries where volatility lives, coupling to interfaces, and predictable structure over clever abstraction.
 
 **Link:** https://palmshed.dev/articles/designing-maintainable-systems
 

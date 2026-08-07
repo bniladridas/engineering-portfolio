@@ -15,7 +15,7 @@ I stopped writing "fix bug" and started writing messages that answer the three q
 2. **Why?** The constraint, the bug, or the trade-off that drove the change.
 3. **Why not the obvious alternative?** The one line that saves someone from "improving" it back.
 
-Example — instead of:
+Example: instead of:
 
 ```
 fix bug in login

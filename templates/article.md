@@ -17,7 +17,7 @@ The first two paragraphs make the promise. State the thesis plainly, in the firs
 
 ## The observation
 
-What did you notice that made this worth writing? Specifics beat abstractions — name the moment, the project, the mistake.
+What did you notice that made this worth writing? Specifics beat abstractions: name the moment, the project, the mistake.
 
 ## The argument
 
@@ -29,7 +29,7 @@ The actionable part. Concrete rules, patterns, or a short list that the reader c
 
 ## The reflection
 
-What changed in how you work because of this? End with a line that echoes the thesis — no summary, no new ideas.
+What changed in how you work because of this? End with a line that echoes the thesis: no summary, no new ideas.
 
 ## Takeaway
 

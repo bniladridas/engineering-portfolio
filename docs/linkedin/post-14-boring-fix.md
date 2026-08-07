@@ -13,7 +13,7 @@ A flag nobody needed. A second code path that duplicated the first. An "advanced
 
 The removal touched dozens of files, but the diff was the smallest I've ever made. Every deleted line was a surface area that no longer needed to be tested, documented, or explained.
 
-Engineers treat "shipping" as adding. The systems I've most enjoyed maintaining were shaped as much by subtraction — dead code deleted, forks merged, workarounds retired.
+Engineers treat "shipping" as adding. The systems I've most enjoyed maintaining were shaped as much by subtraction: dead code deleted, forks merged, workarounds retired.
 
 Deleting is harder than adding:
 

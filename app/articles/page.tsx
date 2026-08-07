@@ -2,7 +2,7 @@ import { getArticles, formatDate } from '@/lib/content'
 import ContentCard from '@/components/ContentCard'
 
 export const metadata = {
-  title: 'Articles — Palmshed',
+  title: 'Articles · Palmshed',
   description:
     'Long-form engineering writing on maintainable systems, developer tools, open source, and building software that lasts.',
   alternates: { canonical: '/articles' },

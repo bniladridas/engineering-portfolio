@@ -1,5 +1,5 @@
 ---
-title: Developer Tools That People Remember — article launch
+title: "Developer Tools That People Remember: article launch"
 slug: post-07-tools-article
 date: 2026-08-12
 status: published

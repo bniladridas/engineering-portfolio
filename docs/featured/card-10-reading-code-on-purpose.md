@@ -12,7 +12,7 @@ tag: article
 **Subtitle:** The craft that underlies every other.
 
 **Description:**
-We're taught to write code, rarely to read it. But reading is most of the job — a skill built from behavior, call graphs, and tests, practiced deliberately, and compounded like any other.
+We're taught to write code, rarely to read it. But reading is most of the job: a skill built from behavior, call graphs, and tests, practiced deliberately, and compounded like any other.
 
 **Link:** https://palmshed.dev/articles/reading-code-with-intention
 

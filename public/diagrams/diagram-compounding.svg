@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" font-family="Inter, IBM Plex Sans, sans-serif">
   <rect width="1200" height="480" fill="#ffffff"/>
   <text x="80" y="60" font-size="28" font-weight="600" fill="#0d0d0d">Small decisions compound</text>
-  <text x="80" y="96" font-size="20" fill="#4b4b4b">A shortcut a day, or a deposit a day — the difference is the trajectory, not the size.</text>
+  <text x="80" y="96" font-size="20" fill="#4b4b4b">A shortcut a day, or a deposit a day: the difference is the trajectory, not the size.</text>
 
   <text x="80" y="180" font-size="20" font-weight="600" fill="#0d0d0d">One shortcut per week</text>
   <line x1="80" y1="220" x2="320" y2="340" stroke="#e3e3e0" stroke-width="4"/>

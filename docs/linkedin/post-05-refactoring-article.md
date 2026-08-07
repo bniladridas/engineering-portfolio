@@ -1,5 +1,5 @@
 ---
-title: Refactoring As Communication — article launch
+title: "Refactoring As Communication: article launch"
 slug: post-05-refactoring-article
 date: 2026-07-29
 status: published
@@ -17,7 +17,7 @@ New article, *Refactoring As Communication*:
 
 - Names are the highest-value documentation. If a function needs its body explained, it needs a new name.
 - Extraction turns a wall into a map. If you can name a chunk, it deserves to be a function.
-- Deletion is honesty — dead code and stale comments are noise.
+- Deletion is honesty: dead code and stale comments are noise.
 
 The sustainable form is continuous, not the big-bang rewrite. Small improvements, every change.
 
