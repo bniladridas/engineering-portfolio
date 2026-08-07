@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import HeaderSearch from './HeaderSearch'
+import ThemeToggle from './ThemeToggle'
 
 const nav = [
   { href: '/articles', label: 'Articles' },
@@ -44,6 +45,7 @@ export default function Header() {
             </Link>
           ))}
         </nav>
+        <ThemeToggle />
         <HeaderSearch />
       </div>
     </header>

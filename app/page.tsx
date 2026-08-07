@@ -27,7 +27,7 @@ export default function Home() {
           padding: 'var(--space-8) 0',
           borderBottom: '1px solid var(--line)',
           background:
-            'repeating-linear-gradient(0deg, transparent 0 39px, rgba(227,227,224,0.35) 39px 40px)',
+            'repeating-linear-gradient(0deg, transparent 0 39px, var(--grid-line) 39px 40px)',
         }}
       >
         <div className="container">
