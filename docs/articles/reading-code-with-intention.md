@@ -6,8 +6,8 @@ status: published
 tags: [debugging, reading-code, craft]
 intro: We are taught to write code, rarely to read it. But reading is most of the job, and it is a skill that improves like any other.
 references:
-  - label: Palmshed — reading the codebase's call graph before the first change
-    url: palmshed
+  - label: kit — reading the codebase's call graph before the first change
+    url: kit
 ---
 
 # Reading Code With Intention

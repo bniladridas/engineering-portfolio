@@ -6,14 +6,14 @@ status: published
 tags: [configuration, architecture, developer-tools]
 intro: I spent a month designing Palmshed's configuration system. The rules I ended up with were the opposite of the ones I started with — and the whole design fits on one page.
 references:
-  - label: Palmshed — the CLI this design is for
-    url: palmshed
+  - label: kit — the CLI this design is for
+    url: kit
   - label: Layered config design note
-    url: notes/blob/main/palmshed-config.md
-  - label: PR #21 — splitting the config loader into named functions
-    url: palmshed/pull/21
-  - label: PR #30 — structure change before behavior change
-    url: palmshed/pull/30
+    url: kit/blob/main/docs/kit_config.md
+  - label: Config loader — split into named functions
+    url: kit/pulls
+  - label: Structure change before behavior change
+    url: kit/pulls
 ---
 
 # Designing a Configuration System

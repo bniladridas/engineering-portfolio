@@ -7,7 +7,7 @@ tags: [authentication, security, backend]
 intro: Every auth mistake is invisible at the moment it's made and expensive the moment it's found. That's why it has to be done right the first time.
 references:
   - label: Auth service design note — token model and session lifetimes
-    url: notes/blob/main/auth-service.md
+    url: auth/blob/main/ARCHITECTURE.md
 ---
 
 # Authentication Is a Foundation, Not a Feature

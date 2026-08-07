@@ -1,19 +1,19 @@
 ---
-title: Palmshed
-subtitle: A developer tool for people who care about maintainable output
-link: palmshed
+title: kit
+subtitle: A command line toolkit for developers
+link: kit
 tag: project
 ---
 
-# Palmshed
+# kit
 
 **Category:** Project
 
-**Subtitle:** A developer tool for people who care about maintainable output.
+**Subtitle:** A command line toolkit for developers.
 
 **Description:**
-Palmshed is a command-line developer tool being built in public. It does one job well, treats error messages as an interface, and ships boring, predictable code on purpose.
+kit is a command-line developer tool being built in public. It does one job well, treats error messages as an interface, and ships boring, predictable code on purpose.
 
-**Link:** https://github.com/palmshed/palmshed
+**Link:** https://github.com/palmshed/kit
 
 **Featured on:** Profile featured section, position 2.

@@ -103,7 +103,7 @@ npm run typecheck    # TypeScript check
 
 ## Before you publish — checklist
 
-- **Real URLs:** the `references:` links in articles and the GitHub link in `lib/site.ts` currently point to `github.com/palmshed/*`. Replace them with the real repositories and pull requests.
+- **Real URLs:** article `references:` point at the real repos under `github.com/palmshed` (the `kit` CLI and the `auth` platform) via `site.github` in `lib/site.ts`. Verify links on the live site after deployment.
 - **Site URL:** set `NEXT_PUBLIC_SITE_URL` (used for canonical URLs, sitemap, RSS, OG images). When
   deploying at a sub-path, also set `NEXT_PUBLIC_BASE_PATH` so all links and assets are prefixed.
 - **Open Graph:** `scripts/generate-og.mjs` renders `public/og.png` at build time; verify the social card after deployment.

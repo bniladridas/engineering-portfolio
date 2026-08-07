@@ -25,7 +25,7 @@ export default function OpenSourcePage() {
           {`
 ## Projects
 
-- **Palmshed** — a command-line developer tool, built and maintained in public. [Repository](https://github.com/palmshed/palmshed)
+- **kit** — a command-line developer tool, built and maintained in public. [Repository](https://github.com/palmshed/kit)
 
 ## How I contribute
 
