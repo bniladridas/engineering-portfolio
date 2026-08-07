@@ -7,7 +7,7 @@ tags: [developer-tools, ux, product]
 intro: Developers do not adopt tools because they are powerful. They adopt tools that let them stay in flow. Everything else is a tax.
 references:
   - label: Palmshed — a CLI that treats errors as an interface
-    url: https://github.com/palmshed/palmshed
+    url: palmshed
 ---
 
 # Developer Tools That People Remember

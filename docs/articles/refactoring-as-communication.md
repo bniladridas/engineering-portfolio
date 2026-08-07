@@ -7,7 +7,7 @@ tags: [refactoring, communication, code-review]
 intro: A refactor is a letter to the next engineer. Every rename, every extracted function, every deleted comment is a sentence in it.
 references:
   - label: Palmshed PR #21 — config loader split into named functions
-    url: https://github.com/palmshed/palmshed/pull/21
+    url: palmshed/pull/21
 ---
 
 # Refactoring As Communication

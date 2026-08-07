@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" font-family="Inter, IBM Plex Sans, sans-serif">
+  <rect width="1200" height="480" fill="#ffffff"/>
+  <text x="80" y="60" font-size="28" font-weight="600" fill="#0d0d0d">Config precedence in Palmshed</text>
+  <text x="80" y="96" font-size="20" fill="#4b4b4b">Each layer overrides the ones below it. Higher wins, later wins.</text>
+
+  <rect x="80" y="300" width="300" height="64" rx="10" fill="#f6f6f4" stroke="#e3e3e0" stroke-width="2"/>
+  <text x="230" y="330" font-size="17" font-weight="600" fill="#0d0d0d" text-anchor="middle">defaults</text>
+  <text x="230" y="350" font-size="14" fill="#4b4b4b" text-anchor="middle">lowest precedence</text>
+
+  <rect x="80" y="220" width="300" height="64" rx="10" fill="#ffffff" stroke="#0d0d0d" stroke-width="3"/>
+  <text x="230" y="250" font-size="17" font-weight="600" fill="#0d0d0d" text-anchor="middle">config file</text>
+  <text x="230" y="270" font-size="14" fill="#4b4b4b" text-anchor="middle">per-project defaults</text>
+
+  <rect x="80" y="140" width="300" height="64" rx="10" fill="#ffffff" stroke="#0d0d0d" stroke-width="3"/>
+  <text x="230" y="170" font-size="17" font-weight="600" fill="#0d0d0d" text-anchor="middle">environment</text>
+  <text x="230" y="190" font-size="14" fill="#4b4b4b" text-anchor="middle">secrets, per-machine</text>
+
+  <rect x="80" y="60" width="300" height="64" rx="10" fill="#1f883d"/>
+  <text x="230" y="90" font-size="17" font-weight="600" fill="#ffffff" text-anchor="middle">flags</text>
+  <text x="230" y="110" font-size="14" fill="#e6f2ea" text-anchor="middle">highest precedence</text>
+
+  <rect x="440" y="60" width="600" height="304" rx="12" fill="#ffffff" stroke="#e3e3e0" stroke-width="2"/>
+  <text x="472" y="104" font-size="18" font-weight="600" fill="#0d0d0d">Why this order</text>
+  <text x="472" y="142" font-size="16" fill="#4b4b4b">· Flags change one run — never committed, never shipped.</text>
+  <text x="472" y="174" font-size="16" fill="#4b4b4b">· Environment varies per machine and carries secrets.</text>
+  <text x="472" y="206" font-size="16" fill="#4b4b4b">· The file is checked in: stable, reviewable, shared.</text>
+  <text x="472" y="238" font-size="16" fill="#4b4b4b">· Defaults exist so every layer is optional.</text>
+  <text x="472" y="286" font-size="15" fill="#1f883d">The loader applies layers bottom-up and</text>
+  <text x="472" y="308" font-size="15" fill="#1f883d">fails loudly on any conflict that matters.</text>
+
+  <text x="80" y="440" font-size="18" fill="#4b4b4b">Precedence is a policy. Write it down, and let the code follow the policy instead of inventing it.</text>
+</svg>

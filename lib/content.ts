@@ -1,7 +1,8 @@
 import { readFileSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
 import matter from 'gray-matter'
-import type { Article, Card, Post, ProfileDoc, Reference } from './types'
+import { resolveRefUrl } from './site'
+import type { ArchNote, Article, Card, Post, ProfileDoc, Reference } from './types'
 
 const DOCS = join(process.cwd(), 'docs')
 
@@ -33,7 +34,10 @@ export function getArticles(): Article[] {
         date: data.date as string,
         tags: (data.tags as string[]) || [],
         intro: (data.intro as string) || '',
-        references: (data.references as Reference[]) || [],
+        references: ((data.references as Reference[]) || []).map((r) => ({
+          label: r.label,
+          url: resolveRefUrl(r.url),
+        })),
         content: stripLeadingTitle(content),
         words: words(content),
       }
@@ -79,6 +83,26 @@ export function getCards(): Card[] {
       }
     })
     .sort((a, b) => (a.slug < b.slug ? -1 : 1))
+}
+
+export function getArchNotes(): ArchNote[] {
+  return readDir('architecture')
+    .map((file) => {
+      const { data, content, slug } = readFile('architecture', file)
+      return {
+        slug,
+        title: data.title as string,
+        date: data.date as string,
+        topic: (data.topic as string) || '',
+        content: stripLeadingTitle(content),
+        words: words(content),
+      }
+    })
+    .sort((a, b) => (a.slug < b.slug ? -1 : 1))
+}
+
+export function getArchNote(slug: string): ArchNote | undefined {
+  return getArchNotes().find((n) => n.slug === slug)
 }
 
 const PROFILE_ORDER = [

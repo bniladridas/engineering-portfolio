@@ -7,9 +7,9 @@ tags: [architecture, design, maintainability]
 intro: The architecture that survives is the one that anticipates change — not by predicting the future, but by making change cheap.
 references:
   - label: Auth service — three subsystems, one stable contract
-    url: https://github.com/palmshed/notes/blob/main/auth-service.md
+    url: notes/blob/main/auth-service.md
   - label: Palmshed — layered config design note
-    url: https://github.com/palmshed/notes/blob/main/palmshed-config.md
+    url: notes/blob/main/palmshed-config.md
 ---
 
 # Designing Maintainable Systems

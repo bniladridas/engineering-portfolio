@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { getArticles, getCards } from '@/lib/content'
+import { site } from '@/lib/site'
 import ContentCard from '@/components/ContentCard'
-import Badge from '@/components/Badge'
 
 export const metadata = {
   alternates: { canonical: '/' },
@@ -11,7 +11,13 @@ export default function Home() {
   const articles = getArticles()
   const cards = getCards()
   const latest = articles[0]
-  const featured = cards.slice(0, 4)
+
+  const featuredArticles = cards
+    .filter((c) => c.tag === 'article')
+    .sort((a, b) => (a.slug < b.slug ? 1 : -1))
+    .slice(0, 3)
+
+  const buildCards = cards.filter((c) => ['project', 'projects', 'open-source'].includes(c.tag)).slice(0, 3)
 
   return (
     <>
@@ -57,8 +63,8 @@ export default function Home() {
             <a href={`/articles/${latest.slug}`} className="button button--primary">
               Latest article
             </a>
-            <a href="/about" className="button button--secondary">
-              About me
+            <a href="/architecture" className="button button--secondary">
+              Architecture notes
             </a>
           </div>
         </div>
@@ -66,26 +72,59 @@ export default function Home() {
 
       <section style={{ padding: 'var(--space-8) 0' }}>
         <div className="container">
-          <div style={{ marginBottom: 'var(--space-6)' }}>
-            <p className="eyebrow">Featured</p>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 32, margin: 'var(--space-2) 0 0' }}>
-              Selected work
-            </h2>
-          </div>
+          <p className="eyebrow">What I build</p>
+          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 32, margin: 'var(--space-2) 0 var(--space-5)' }}>
+            Systems, tools, and open source
+          </h2>
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
               gap: 'var(--space-5)',
             }}
           >
-            {featured.map((card) => (
+            {buildCards.map((card) => (
               <ContentCard
                 key={card.slug}
                 eyebrow={card.tag.toUpperCase()}
                 title={card.title}
                 subtitle={card.subtitle}
-                href={card.link.startsWith('/') ? card.link : '/featured'}
+                href={card.link.startsWith('/') ? card.link : site.author.github}
+                tag={card.tag}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: 'var(--space-8) 0', borderTop: '1px solid var(--line)' }}>
+        <div className="container">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+            <div>
+              <p className="eyebrow">Writing</p>
+              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 32, margin: 'var(--space-2) 0 0' }}>
+                Featured articles
+              </h2>
+            </div>
+            <Link href="/articles" style={{ fontWeight: 500 }}>
+              All articles →
+            </Link>
+          </div>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+              gap: 'var(--space-5)',
+              marginTop: 'var(--space-5)',
+            }}
+          >
+            {featuredArticles.map((card) => (
+              <ContentCard
+                key={card.slug}
+                eyebrow={card.tag.toUpperCase()}
+                title={card.title}
+                subtitle={card.subtitle}
+                href={card.link}
                 tag={card.tag}
               />
             ))}
@@ -95,18 +134,8 @@ export default function Home() {
 
       <section style={{ padding: '0 0 var(--space-8)' }}>
         <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-            <div>
-              <p className="eyebrow">Writing</p>
-              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 32, margin: 'var(--space-2) 0 0' }}>
-                Recent articles
-              </h2>
-            </div>
-            <Link href="/articles" style={{ fontWeight: 500 }}>
-              All articles →
-            </Link>
-          </div>
-          <ul style={{ listStyle: 'none', margin: 'var(--space-6) 0 0', padding: 0 }}>
+          <p className="eyebrow">Recent writing</p>
+          <ul style={{ listStyle: 'none', margin: 'var(--space-4) 0 0', padding: 0 }}>
             {articles.slice(0, 5).map((article) => (
               <li
                 key={article.slug}
@@ -130,6 +159,48 @@ export default function Home() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      <section style={{ padding: 'var(--space-8) 0', borderTop: '1px solid var(--line)' }}>
+        <div className="container" style={{ maxWidth: '60ch' }}>
+          <p className="eyebrow">Open source</p>
+          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 32, margin: 'var(--space-2) 0 var(--space-3)' }}>
+            Built and maintained in public
+          </h2>
+          <p style={{ color: 'var(--ink-secondary)', fontSize: 18 }}>
+            Palmshed is developed in the open — the code, the design notes, and the mistakes.
+            Building in public changed how I work, and the practice matters more than the code.
+          </p>
+          <div style={{ display: 'flex', gap: 'var(--space-4)', marginTop: 'var(--space-5)' }}>
+            <a href="/open-source" className="button button--primary">
+              Open source
+            </a>
+            <a href={site.author.github} className="button button--secondary" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: 'var(--space-8) 0', borderTop: '1px solid var(--line)' }}>
+        <div className="container" style={{ maxWidth: '60ch' }}>
+          <p className="eyebrow">Contact</p>
+          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 32, margin: 'var(--space-2) 0 var(--space-3)' }}>
+            Let&rsquo;s talk about software that lasts
+          </h2>
+          <p style={{ color: 'var(--ink-secondary)', fontSize: 18 }}>
+            I write about maintainable systems and developer tools, and I&rsquo;m happy to talk
+            about both — systems design, code review, or building in public.
+          </p>
+          <div style={{ display: 'flex', gap: 'var(--space-4)', marginTop: 'var(--space-5)' }}>
+            <a href="mailto:hello@palmshed.dev" className="button button--primary">
+              Email me
+            </a>
+            <a href={site.author.github} className="button button--secondary" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+          </div>
         </div>
       </section>
     </>

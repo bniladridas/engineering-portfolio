@@ -7,7 +7,7 @@ tags: [engineering-practice, workflows, review]
 intro: Big changes are hard to review, hard to roll back, and hard to reason about. The small change is the unit of safe engineering.
 references:
   - label: Palmshed PR #30 — structure change, then behavior change, in two commits
-    url: https://github.com/palmshed/palmshed/pull/30
+    url: palmshed/pull/30
 ---
 
 # The Art of the Small Change

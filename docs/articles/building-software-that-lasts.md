@@ -7,9 +7,9 @@ tags: [maintainability, architecture, open-source]
 intro: The longer I build software, the less I believe writing code is the difficult part. Keeping software understandable, maintainable, and adaptable is.
 references:
   - label: Palmshed — a CLI tool built in public
-    url: https://github.com/palmshed/palmshed
+    url: palmshed
   - label: Auth service design note
-    url: https://github.com/palmshed/notes/blob/main/auth-service.md
+    url: notes/blob/main/auth-service.md
 ---
 
 # Building Software That Lasts

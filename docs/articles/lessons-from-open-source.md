@@ -7,9 +7,9 @@ tags: [open-source, community, contribution]
 intro: Open source taught me more about engineering than any course did — not because the code is better, but because the process is real.
 references:
   - label: Palmshed — built and maintained in public
-    url: https://github.com/palmshed/palmshed
+    url: palmshed
   - label: Pull request #14 — config loader review
-    url: https://github.com/palmshed/palmshed/pull/14
+    url: palmshed/pull/14
 ---
 
 # Lessons From Open Source

@@ -38,6 +38,15 @@ export interface ProfileDoc {
   content: string
 }
 
+export interface ArchNote {
+  slug: string
+  title: string
+  date: string
+  topic: string
+  content: string
+  words: number
+}
+
 export interface TocItem {
   id: string
   text: string

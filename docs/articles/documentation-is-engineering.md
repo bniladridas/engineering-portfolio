@@ -7,9 +7,9 @@ tags: [documentation, teamwork, communication]
 intro: Documentation is not a chore that follows the real work. It is the real work, done in a form that other people can use.
 references:
   - label: Palmshed README — written before the first function
-    url: https://github.com/palmshed/palmshed#readme
+    url: palmshed#readme
   - label: Auth service design note
-    url: https://github.com/palmshed/notes/blob/main/auth-service.md
+    url: notes/blob/main/auth-service.md
 ---
 
 # Documentation Is Engineering

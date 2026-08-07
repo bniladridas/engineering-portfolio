@@ -7,7 +7,7 @@ tags: [building-in-public, open-source, career]
 intro: Building in public is not posting wins. It is showing the work — the false starts, the trade-offs, and the small decisions — and letting the process be the content.
 references:
   - label: Palmshed — built in public, week by week
-    url: https://github.com/palmshed/palmshed
+    url: palmshed
 ---
 
 # Building in Public, Honestly

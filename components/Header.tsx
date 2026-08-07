@@ -3,7 +3,7 @@ import HeaderSearch from './HeaderSearch'
 
 const nav = [
   { href: '/articles', label: 'Articles' },
-  { href: '/posts', label: 'Posts' },
+  { href: '/architecture', label: 'Architecture' },
   { href: '/open-source', label: 'Open Source' },
   { href: '/now', label: 'Now' },
   { href: '/about', label: 'About' },

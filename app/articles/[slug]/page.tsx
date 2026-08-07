@@ -7,6 +7,7 @@ import Badge from '@/components/Badge'
 import TableOfContents from '@/components/TableOfContents'
 import CopyLinkButton from '@/components/CopyLinkButton'
 import PrevNext from '@/components/PrevNext'
+import References from '@/components/References'
 
 export const dynamicParams = false
 
@@ -109,20 +110,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           </header>
           <Markdown>{article.content}</Markdown>
 
-          {article.references.length > 0 ? (
-            <section style={{ maxWidth: '66ch', marginTop: 'var(--space-8)' }}>
-              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 22 }}>References &amp; evidence</h2>
-              <ul style={{ color: 'var(--ink-secondary)' }}>
-                {article.references.map((ref) => (
-                  <li key={ref.url} style={{ margin: 'var(--space-2) 0' }}>
-                    <a href={ref.url} target="_blank" rel="noopener noreferrer">
-                      {ref.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          ) : null}
+          <References references={article.references} />
 
           <PrevNext previous={previous} next={next} />
         </div>
