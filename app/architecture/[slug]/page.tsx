@@ -4,6 +4,7 @@ import { getReadingTime } from '@/lib/reading'
 import { site, withBase, absUrl } from '@/lib/site'
 import Markdown from '@/components/Markdown'
 import Badge from '@/components/Badge'
+import Reveal from '@/components/Reveal'
 
 export const dynamicParams = false
 
@@ -44,29 +45,31 @@ export default async function ArchNotePage({ params }: { params: Promise<{ slug:
   return (
     <article className="container" style={{ paddingTop: 'var(--space-8)', paddingBottom: 'var(--space-8)' }}>
       <div style={{ maxWidth: '66ch' }}>
-        <div style={{ display: 'flex', gap: 'var(--space-2)', marginBottom: 'var(--space-4)' }}>
-          <a href={withBase('/architecture/')} style={{ color: 'var(--ink-secondary)', fontSize: 14, textDecoration: 'none' }}>
-            ← Architecture notes
-          </a>
-        </div>
-        <Badge tone="green">{note.topic}</Badge>
-        <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 44, lineHeight: 1.1, margin: 'var(--space-3) 0' }}>
-          {note.title}
-        </h1>
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: 'var(--space-4)',
-            color: 'var(--ink-secondary)',
-            fontSize: 14,
-            marginBottom: 'var(--space-6)',
-          }}
-        >
-          <span>{formatDate(note.date)}</span>
-          <span aria-hidden>·</span>
-          <span>{readingTime}</span>
-        </div>
+        <Reveal>
+          <div style={{ display: 'flex', gap: 'var(--space-2)', marginBottom: 'var(--space-4)' }}>
+            <a href={withBase('/architecture/')} style={{ color: 'var(--ink-secondary)', fontSize: 14, textDecoration: 'none' }}>
+              ← Architecture notes
+            </a>
+          </div>
+          <Badge tone="green">{note.topic}</Badge>
+          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 44, lineHeight: 1.1, margin: 'var(--space-3) 0' }}>
+            {note.title}
+          </h1>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 'var(--space-4)',
+              color: 'var(--ink-secondary)',
+              fontSize: 14,
+              marginBottom: 'var(--space-6)',
+            }}
+          >
+            <span>{formatDate(note.date)}</span>
+            <span aria-hidden>·</span>
+            <span>{readingTime}</span>
+          </div>
+        </Reveal>
         <Markdown>{note.content}</Markdown>
         <nav
           aria-label="Note navigation"

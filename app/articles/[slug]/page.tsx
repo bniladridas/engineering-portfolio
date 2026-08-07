@@ -8,6 +8,7 @@ import TableOfContents from '@/components/TableOfContents'
 import CopyLinkButton from '@/components/CopyLinkButton'
 import PrevNext from '@/components/PrevNext'
 import References from '@/components/References'
+import Reveal from '@/components/Reveal'
 
 export const dynamicParams = false
 
@@ -73,8 +74,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         <aside style={{ position: 'sticky', top: 'var(--space-6)' }}>
           <TableOfContents items={toc} />
         </aside>
-        <div>
-          <header style={{ maxWidth: '66ch', marginBottom: 'var(--space-7)' }}>
+        <Reveal>
+          <div>
+            <header style={{ maxWidth: '66ch', marginBottom: 'var(--space-7)' }}>
             <div style={{ display: 'flex', gap: 'var(--space-2)', marginBottom: 'var(--space-4)' }}>
               {article.tags.map((tag) => (
                 <Badge key={tag} tone="green">
@@ -113,7 +115,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           <References references={article.references} />
 
           <PrevNext previous={previous} next={next} />
-        </div>
+          </div>
+        </Reveal>
       </div>
     </article>
   )

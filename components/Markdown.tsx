@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 import { slugifyHeading } from '@/lib/reading'
 import { withBase } from '@/lib/site'
+import Reveal from './Reveal'
 
 function heading(level: 'h2' | 'h3') {
   const Tag = level
@@ -35,14 +36,16 @@ export default function Markdown({ children }: { children: string }) {
             const href = source?.startsWith('/') ? withBase(source) : source
             if (source?.startsWith('/diagrams/')) {
               return (
-                <figure className="diagram" style={{ margin: 'var(--space-7) 0' }}>
-                  <img src={href} alt={alt ?? ''} style={{ width: '100%', height: 'auto', border: '1px solid var(--line)', borderRadius: 12 }} />
-                  {alt ? (
-                    <figcaption style={{ color: 'var(--ink-secondary)', fontSize: 14, textAlign: 'center', marginTop: 'var(--space-2)' }}>
-                      {alt}
-                    </figcaption>
-                  ) : null}
-                </figure>
+                <Reveal>
+                  <figure className="diagram" style={{ margin: 'var(--space-7) 0' }}>
+                    <img src={href} alt={alt ?? ''} style={{ width: '100%', height: 'auto', border: '1px solid var(--line)', borderRadius: 12 }} />
+                    {alt ? (
+                      <figcaption style={{ color: 'var(--ink-secondary)', fontSize: 14, textAlign: 'center', marginTop: 'var(--space-2)' }}>
+                        {alt}
+                      </figcaption>
+                    ) : null}
+                  </figure>
+                </Reveal>
               )
             }
             return <img src={href} alt={alt ?? ''} style={{ maxWidth: '100%' }} />

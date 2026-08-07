@@ -32,6 +32,7 @@ export default function ContentCard({
   const hasCopy = Boolean(copyTitle || copyDescription)
   return (
     <article
+      className="card"
       style={{
         display: 'flex',
         flexDirection: 'column',
@@ -41,6 +42,7 @@ export default function ContentCard({
         border: '1px solid var(--line)',
         borderRadius: 12,
         minHeight: 280,
+        height: '100%',
       }}
     >
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 'var(--space-3)', flexWrap: 'wrap' }}>

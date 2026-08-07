@@ -51,7 +51,7 @@ export default function SearchPage() {
       {!loading && query.trim() && results.length === 0 ? (
         <p style={{ color: 'var(--ink-secondary)' }}>No results for “{query}”.</p>
       ) : null}
-      <ul style={{ listStyle: 'none', margin: 'var(--space-6) 0 0', padding: 0 }}>
+      <ul className="search-results" style={{ listStyle: 'none', margin: 'var(--space-6) 0 0', padding: 0 }}>
         {results.map((result) => (
           <li key={result.href} style={{ borderBottom: '1px solid var(--line)', padding: 'var(--space-4) 0' }}>
             <Link href={result.href} style={{ color: 'var(--black)' }}>

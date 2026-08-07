@@ -205,7 +205,7 @@ a:hover {
   font-family: var(--font-body);
   cursor: pointer;
   border: none;
-  transition: background-color 120ms ease;
+  transition: background-color 120ms ease, transform 120ms ease;
 }
 
 .button--primary {
@@ -221,6 +221,11 @@ a:hover {
 
 .button:hover {
   text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.button:active {
+  transform: translateY(0);
 }
 
 .button--primary:hover {
@@ -277,6 +282,30 @@ a:hover {
   align-items: center;
   gap: var(--space-3);
   margin-bottom: var(--space-4);
+}
+
+.card {
+  transition: transform 220ms ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(13, 13, 13, 0.06);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.search-results {
+  animation: fade-up 240ms ease;
 }
 
 a:focus-visible,

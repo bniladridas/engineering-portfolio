@@ -6,6 +6,7 @@ import Markdown from '@/components/Markdown'
 import Badge from '@/components/Badge'
 import CopyLinkButton from '@/components/CopyLinkButton'
 import CopyableBlock from '@/components/CopyableBlock'
+import Reveal from '@/components/Reveal'
 
 export const dynamicParams = false
 
@@ -58,7 +59,9 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
         {formatDate(post.date)} · {getReadingTime(Math.round(post.content.split(/\s+/).length))}
       </p>
       <CopyableBlock title="Post" content={post.plain} label="post">
-        <Markdown>{post.content}</Markdown>
+        <Reveal>
+          <Markdown>{post.content}</Markdown>
+        </Reveal>
       </CopyableBlock>
     </article>
   )
