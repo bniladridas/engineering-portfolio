@@ -2,6 +2,7 @@ import { readFileSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
 import matter from 'gray-matter'
 import { resolveRefUrl } from './site'
+import { toPlainText, cardDescription } from './plain'
 import type { ArchNote, Article, Card, Post, ProfileDoc, Reference } from './types'
 
 const DOCS = join(process.cwd(), 'docs')
@@ -60,6 +61,7 @@ export function getPosts(): Post[] {
         topic: (data.topic as string) || '',
         hook: (data.hook as string) || '',
         content: stripLeadingTitle(content),
+        plain: toPlainText(content),
       }
     })
     .sort((a, b) => (a.date < b.date ? 1 : -1))
@@ -81,6 +83,7 @@ export function getCards(): Card[] {
         link: link.startsWith('/') || /^https?:\/\//.test(link) ? link : resolveRefUrl(link),
         tag: data.tag as string,
         content,
+        description: cardDescription(content),
       }
     })
     .sort((a, b) => (a.slug < b.slug ? -1 : 1))
@@ -107,6 +110,7 @@ export function getArchNote(slug: string): ArchNote | undefined {
 }
 
 const PROFILE_ORDER = [
+  'headline',
   'summary',
   'about',
   'experience',

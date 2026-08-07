@@ -31,6 +31,8 @@ export default function FeaturedPage() {
             subtitle={card.subtitle}
             href={card.link}
             tag={card.tag}
+            copyTitle={card.title}
+            copyDescription={card.description || undefined}
           />
         ))}
       </div>

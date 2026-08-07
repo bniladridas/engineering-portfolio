@@ -21,6 +21,7 @@ export interface Post {
   topic: string
   hook: string
   content: string
+  plain: string
 }
 
 export interface Card {
@@ -30,6 +31,7 @@ export interface Card {
   link: string
   tag: string
   content: string
+  description: string
 }
 
 export interface ProfileDoc {

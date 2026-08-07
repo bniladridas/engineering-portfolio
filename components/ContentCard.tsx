@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Badge from './Badge'
+import CopyButton from './CopyButton'
 
 function isExternal(href: string): boolean {
   return /^https?:\/\//.test(href)
@@ -13,6 +14,8 @@ interface ContentCardProps {
   href: string
   tag?: string
   meta?: string
+  copyTitle?: string
+  copyDescription?: string
 }
 
 export default function ContentCard({
@@ -23,7 +26,10 @@ export default function ContentCard({
   href,
   tag,
   meta,
+  copyTitle,
+  copyDescription,
 }: ContentCardProps) {
+  const hasCopy = Boolean(copyTitle || copyDescription)
   return (
     <article
       style={{
@@ -37,9 +43,16 @@ export default function ContentCard({
         minHeight: 280,
       }}
     >
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 'var(--space-3)', flexWrap: 'wrap' }}>
         <span className="eyebrow">{eyebrow}</span>
-        {tag ? <Badge tone="green">{tag}</Badge> : null}
+        {hasCopy ? (
+          <div style={{ display: 'flex', gap: 'var(--space-2)', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
+            {copyTitle ? <CopyButton text={copyTitle} label="title" /> : null}
+            {copyDescription ? <CopyButton text={copyDescription} label="description" /> : null}
+          </div>
+        ) : tag ? (
+          <Badge tone="green">{tag}</Badge>
+        ) : null}
       </div>
       <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 22, lineHeight: 1.2, margin: 0 }}>
         {isExternal(href) ? (

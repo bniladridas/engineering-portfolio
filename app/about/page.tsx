@@ -1,9 +1,12 @@
 import { getProfileDocs } from '@/lib/content'
+import { toPlainText } from '@/lib/plain'
 import Markdown from '@/components/Markdown'
+import CopyableBlock from '@/components/CopyableBlock'
 
 export const metadata = { title: 'About — Palmshed' }
 
 const LABELS: Record<string, string> = {
+  headline: 'Headline',
   summary: 'Summary',
   about: 'About',
   experience: 'Experience',
@@ -12,6 +15,8 @@ const LABELS: Record<string, string> = {
   interests: 'Interests',
   'open-to-work': 'Open to work',
 }
+
+const COPYABLE = new Set(['headline', 'summary', 'about', 'experience'])
 
 export default function AboutPage() {
   const docs = getProfileDocs()
@@ -23,17 +28,28 @@ export default function AboutPage() {
         About
       </h1>
       <p style={{ color: 'var(--ink-secondary)', fontSize: 18, maxWidth: '52ch' }}>
-        The full profile, rendered from the version-controlled source.
+        The full profile, rendered from the version-controlled source. Copy any section into
+        LinkedIn.
       </p>
 
-      {docs.map((doc) => (
-        <section key={doc.slug} style={{ marginTop: 'var(--space-7)', maxWidth: '66ch' }}>
-          <p className="eyebrow" style={{ marginBottom: 'var(--space-2)' }}>
-            {LABELS[doc.slug] ?? doc.title}
-          </p>
-          <Markdown>{doc.content}</Markdown>
-        </section>
-      ))}
+      {docs.map((doc) => {
+        const label = LABELS[doc.slug] ?? doc.title
+        const body = <Markdown>{doc.content}</Markdown>
+        return COPYABLE.has(doc.slug) ? (
+          <section key={doc.slug}>
+            <CopyableBlock title={label} content={toPlainText(doc.content)}>
+              {body}
+            </CopyableBlock>
+          </section>
+        ) : (
+          <section key={doc.slug} style={{ marginTop: 'var(--space-7)', maxWidth: '66ch' }}>
+            <p className="eyebrow" style={{ marginBottom: 'var(--space-2)' }}>
+              {label}
+            </p>
+            {body}
+          </section>
+        )
+      })}
     </div>
   )
 }

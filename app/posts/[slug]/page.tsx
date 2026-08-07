@@ -5,6 +5,7 @@ import { site, absUrl } from '@/lib/site'
 import Markdown from '@/components/Markdown'
 import Badge from '@/components/Badge'
 import CopyLinkButton from '@/components/CopyLinkButton'
+import CopyableBlock from '@/components/CopyableBlock'
 
 export const dynamicParams = false
 
@@ -56,7 +57,9 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       <p style={{ color: 'var(--ink-secondary)', fontSize: 14, margin: '0 0 var(--space-6)' }}>
         {formatDate(post.date)} · {getReadingTime(Math.round(post.content.split(/\s+/).length))}
       </p>
-      <Markdown>{post.content}</Markdown>
+      <CopyableBlock title="Post" content={post.plain} label="post">
+        <Markdown>{post.content}</Markdown>
+      </CopyableBlock>
     </article>
   )
 }
