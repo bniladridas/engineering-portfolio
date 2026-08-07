@@ -30,7 +30,7 @@ That freed me. I stopped treating a contribution as a performance and started tr
 
 My first review came back with more comments than lines. It stung. Then I reread it and realized every comment was about the code, not about me. "This branch isn't reachable." "Can this fail?" "Naming." Nothing personal.
 
-![The contribution loop: contribution, review, revision, merge, repeat](/diagrams/diagram-pr-review.svg)
+![A contribution is a cycle, not an event: each loop makes the next contribution easier, so the repository grows its own contributors.](/diagrams/diagram-pr-review.svg)
 
 That separation is the single most valuable habit open source gave me. It let me take criticism as data instead of as judgment, which made me dramatically faster to improve. Good codebases do this on purpose: they keep reviews technical, they explain reasoning, and they thank contributors for the work regardless of the outcome.
 

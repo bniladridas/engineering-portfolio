@@ -38,7 +38,7 @@ export default function Markdown({ children }: { children: string }) {
               return (
                 <Reveal>
                   <figure className="diagram" style={{ margin: 'var(--space-7) 0' }}>
-                    <img src={href} alt={alt ?? ''} style={{ width: '100%', height: 'auto', border: '1px solid var(--line)', borderRadius: 12 }} />
+                    <img src={href} alt={alt ?? ''} style={{ width: '100%', height: 'auto', display: 'block' }} />
                     {alt ? (
                       <figcaption style={{ color: 'var(--ink-secondary)', fontSize: 14, textAlign: 'center', marginTop: 'var(--space-2)' }}>
                         {alt}

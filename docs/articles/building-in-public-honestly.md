@@ -34,7 +34,7 @@ I keep the bar low on purpose. A weekend build log. A diff that taught me someth
 
 Anyone can post the version that worked. The posts that actually help other engineers are the ones that show the version that didn't: the migration that lost data, the abstraction that collapsed, the estimate that was wrong by 4x.
 
-![The public build loop: showing the work invites audits, and audits make the work better](/diagrams/diagram-feedback-loop.svg)
+![Showing the work invites audits, and each audit is a correction the solo builder would have found late or never.](/diagrams/diagram-feedback-loop.svg)
 
 There is a cost to these posts. They are less flattering. They admit uncertainty. But they are also the only posts with real information in them, because they describe the part of engineering that is systematically hidden, and hidden things are what people can't learn any other way.
 

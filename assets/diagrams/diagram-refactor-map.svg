@@ -1,26 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" font-family="Inter, IBM Plex Sans, sans-serif">
-  <rect width="1200" height="480" fill="#ffffff"/>
-  <text x="80" y="60" font-size="28" font-weight="600" fill="#0d0d0d">Refactoring as a map</text>
-  <text x="80" y="96" font-size="20" fill="#4b4b4b">Break the wall into rooms with labels, so the reader chooses where to look.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="200" viewBox="0 0 600 200" font-family="Inter, IBM Plex Sans, sans-serif">
+  <rect x="23" y="28" width="232" height="150" rx="12" fill="#f6f6f4" stroke="#e3e3e0" stroke-width="1"/>
+  <text x="46" y="58" font-size="16" font-weight="600" fill="#0d0d0d">one long function</text>
+  <text x="46" y="90" font-size="15" fill="#4b4b4b">validate payload</text>
+  <text x="46" y="116" font-size="15" fill="#4b4b4b">format error</text>
+  <text x="46" y="142" font-size="15" fill="#4b4b4b">retry logic</text>
 
-  <rect x="80" y="150" width="500" height="260" rx="12" fill="#f6f6f4" stroke="#e3e3e0" stroke-width="2"/>
-  <text x="112" y="190" font-size="20" font-weight="600" fill="#0d0d0d">one long function</text>
-  <text x="112" y="232" font-size="16" fill="#4b4b4b">validate payload</text>
-  <text x="112" y="280" font-size="16" fill="#4b4b4b">format error</text>
-  <text x="112" y="328" font-size="16" fill="#4b4b4b">retry logic</text>
-  <text x="112" y="372" font-size="14" fill="#4b4b4b">reader holds everything in memory</text>
+  <line x1="279" y1="100" x2="310" y2="100" stroke="#1f883d" stroke-width="2"/>
+  <path d="M304 94 L312 100 L304 106" fill="none" stroke="#1f883d" stroke-width="2"/>
+  <text x="295" y="88" font-size="15" font-weight="600" fill="#1f883d" text-anchor="middle">extract</text>
 
-  <line x1="640" y1="280" x2="700" y2="280" stroke="#1f883d" stroke-width="5"/>
-  <text x="670" y="250" font-size="16" font-weight="600" fill="#1f883d" text-anchor="middle">extract</text>
+  <rect x="329" y="28" width="248" height="40" rx="8" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
+  <text x="453" y="52" font-size="15" font-weight="600" fill="#0d0d0d" text-anchor="middle">validatePayload()</text>
 
-  <rect x="720" y="150" width="400" height="72" rx="10" fill="#ffffff" stroke="#0d0d0d" stroke-width="3"/>
-  <text x="920" y="190" font-size="17" font-weight="600" fill="#0d0d0d" text-anchor="middle">validatePayload()</text>
+  <rect x="329" y="82" width="248" height="40" rx="8" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
+  <text x="453" y="106" font-size="15" font-weight="600" fill="#0d0d0d" text-anchor="middle">formatError()</text>
 
-  <rect x="720" y="242" width="400" height="72" rx="10" fill="#ffffff" stroke="#0d0d0d" stroke-width="3"/>
-  <text x="920" y="282" font-size="17" font-weight="600" fill="#0d0d0d" text-anchor="middle">formatError()</text>
-
-  <rect x="720" y="334" width="400" height="72" rx="10" fill="#ffffff" stroke="#0d0d0d" stroke-width="3"/>
-  <text x="920" y="374" font-size="17" font-weight="600" fill="#0d0d0d" text-anchor="middle">retryWithBackoff()</text>
-
-  <text x="80" y="440" font-size="18" fill="#4b4b4b">If you can name a chunk, it deserves to be a function. Naming is the refactor.</text>
+  <rect x="329" y="136" width="248" height="40" rx="8" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
+  <text x="453" y="160" font-size="15" font-weight="600" fill="#0d0d0d" text-anchor="middle">retryWithBackoff()</text>
 </svg>

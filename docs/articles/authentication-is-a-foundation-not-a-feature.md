@@ -42,7 +42,7 @@ A useful mental model separates authentication from authorization, and both from
 
 Systems that blur these get into trouble. A session token is used as proof of identity, or a role is stored in a cookie the client can edit, or "admin" becomes a boolean instead of a policy. Each blur is a bug waiting for a motivated user.
 
-![The auth flow: credentials, verify, issue token, authorize, and the session that ends](/diagrams/diagram-auth-flow.svg)
+![The failure paths are the design: rate-limit the slow hash, keep tokens short-lived, and design the expiry path as deliberately as the happy path.](/diagrams/diagram-auth-flow.svg)
 
 I keep the model explicit, even in small systems. Who you are, what you can do, and how long that lasts should be three different questions with three different answers.
 

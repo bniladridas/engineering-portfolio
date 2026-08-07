@@ -30,7 +30,7 @@ When a tool works, the developer ignores it. When it fails, the developer reads 
 
 I built kit around this. Every error it emits answers four questions, in order: what went wrong, where, what the developer should do about it, and what happens if they don't. The first time I shipped an error that was just the raw exception text, a beta tester replied with a screenshot and a one-word review: "what?" That was the day error messages became a first-class feature.
 
-![The error message is the interface: what, where, what to do](/diagrams/diagram-error-message.svg)
+![When a tool fails, the error is the only interface, so it must say what happened, where, and what to do next.](/diagrams/diagram-error-message.svg)
 
 A good error message answers four questions, in order: what went wrong, where, what the developer should do about it, and what happens if they don't. Most tools answer the first one, vaguely, and stop. The difference between "Error: unable to connect" and "Could not reach api.example.com on port 443. Check that the token is set and the network allows outbound connections." is the difference between a frustrating afternoon and a ten-second fix.
 

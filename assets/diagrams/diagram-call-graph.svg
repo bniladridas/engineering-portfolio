@@ -1,28 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" font-family="Inter, IBM Plex Sans, sans-serif">
-  <rect width="1200" height="480" fill="#ffffff"/>
-  <text x="80" y="60" font-size="28" font-weight="600" fill="#0d0d0d">Reading code from behavior inward</text>
-  <text x="80" y="96" font-size="20" fill="#4b4b4b">Start at the behavior, follow the call graph, deep-read only the load-bearing parts.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="220" viewBox="0 0 600 220" font-family="Inter, IBM Plex Sans, sans-serif">
+  <rect x="23" y="32" width="145" height="60" rx="10" fill="#1f883d"/>
+  <text x="96" y="57" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">entry point</text>
+  <text x="96" y="77" font-size="15" fill="#e6f2ea" text-anchor="middle">start here</text>
 
-  <rect x="80" y="160" width="200" height="70" rx="10" fill="#1f883d"/>
-  <text x="180" y="204" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle">entry point</text>
+  <line x1="168" y1="62" x2="192" y2="62" stroke="#0d0d0d" stroke-width="2"/>
+  <path d="M186 56 L194 62 L186 68" fill="none" stroke="#0d0d0d" stroke-width="2"/>
 
-  <line x1="280" y1="195" x2="360" y2="195" stroke="#0d0d0d" stroke-width="3"/>
-  <text x="320" y="175" font-size="16" fill="#4b4b4b">calls</text>
+  <rect x="194" y="32" width="145" height="60" rx="10" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
+  <text x="266" y="57" font-size="15" font-weight="600" fill="#0d0d0d" text-anchor="middle">service</text>
+  <text x="266" y="77" font-size="15" fill="#4b4b4b" text-anchor="middle">follow the reads</text>
 
-  <rect x="380" y="160" width="200" height="70" rx="10" fill="#ffffff" stroke="#0d0d0b" stroke-width="3"/>
-  <text x="480" y="204" font-size="18" font-weight="600" fill="#0d0d0d" text-anchor="middle">service</text>
+  <line x1="339" y1="62" x2="362" y2="62" stroke="#0d0d0d" stroke-width="2"/>
+  <path d="M356 56 L364 62 L356 68" fill="none" stroke="#0d0d0d" stroke-width="2"/>
 
-  <line x1="580" y1="195" x2="660" y2="195" stroke="#0d0d0d" stroke-width="3"/>
-  <text x="620" y="175" font-size="16" fill="#4b4b4b">reads</text>
+  <rect x="364" y="32" width="213" height="60" rx="10" fill="#e6f2ea" stroke="#1f883d" stroke-width="1"/>
+  <text x="470" y="57" font-size="15" font-weight="600" fill="#0d0d0d" text-anchor="middle">the load-bearing part</text>
+  <text x="470" y="77" font-size="15" font-weight="600" fill="#1f883d" text-anchor="middle">deep-read this</text>
 
-  <rect x="680" y="160" width="200" height="70" rx="10" fill="#ffffff" stroke="#1f883d" stroke-width="3"/>
-  <text x="780" y="204" font-size="18" font-weight="600" fill="#0d0d0d" text-anchor="middle">the load-bearing</text>
-  <text x="780" y="226" font-size="16" fill="#1f883d" text-anchor="middle">deep-read this</text>
+  <line x1="266" y1="92" x2="266" y2="150" stroke="#b0b0ad" stroke-width="2" stroke-dasharray="5 5"/>
+  <line x1="266" y1="150" x2="96" y2="150" stroke="#b0b0ad" stroke-width="2" stroke-dasharray="5 5"/>
+  <path d="M102 144 L96 152 L90 144" fill="none" stroke="#b0b0ad" stroke-width="2"/>
 
-  <line x1="580" y1="235" x2="660" y2="320" stroke="#0d0d0d" stroke-width="3" stroke-dasharray="6 6"/>
-  <rect x="680" y="300" width="200" height="70" rx="10" fill="#ffffff" stroke="#e3e3e0" stroke-width="3"/>
-  <text x="780" y="340" font-size="18" font-weight="600" fill="#4b4b4b" text-anchor="middle">supporting code</text>
-  <text x="780" y="362" font-size="15" fill="#4b4b4b" text-anchor="middle">defer, skim later</text>
-
-  <text x="80" y="440" font-size="18" fill="#4b4b4b">The call graph is the skeleton; deep reading is only for the bones that carry weight.</text>
+  <rect x="23" y="150" width="145" height="60" rx="10" fill="#ffffff" stroke="#e3e3e0" stroke-width="1" stroke-dasharray="5 5"/>
+  <text x="96" y="175" font-size="15" font-weight="600" fill="#4b4b4b" text-anchor="middle">supporting code</text>
+  <text x="96" y="195" font-size="15" fill="#4b4b4b" text-anchor="middle">defer, skim later</text>
 </svg>

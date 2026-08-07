@@ -1,32 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" font-family="Inter, IBM Plex Sans, sans-serif">
-  <rect width="1200" height="480" fill="#ffffff"/>
-  <text x="80" y="60" font-size="28" font-weight="600" fill="#0d0d0d">Config precedence in Palmshed</text>
-  <text x="80" y="96" font-size="20" fill="#4b4b4b">Each layer overrides the ones below it. Higher wins, later wins.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300" font-family="Inter, IBM Plex Sans, sans-serif">
+  <rect x="23" y="24" width="484" height="48" rx="10" fill="#1f883d"/>
+  <text x="46" y="46" font-size="16" font-weight="600" fill="#ffffff">flags</text>
+  <text x="46" y="64" font-size="15" fill="#e6f2ea">one run only</text>
+  <text x="484" y="54" font-size="15" font-weight="600" fill="#e6f2ea" text-anchor="end">highest precedence</text>
 
-  <rect x="80" y="300" width="300" height="64" rx="10" fill="#f6f6f4" stroke="#e3e3e0" stroke-width="2"/>
-  <text x="230" y="330" font-size="17" font-weight="600" fill="#0d0d0d" text-anchor="middle">defaults</text>
-  <text x="230" y="350" font-size="14" fill="#4b4b4b" text-anchor="middle">lowest precedence</text>
+  <rect x="23" y="86" width="484" height="48" rx="10" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
+  <text x="46" y="108" font-size="16" font-weight="600" fill="#0d0d0d">environment</text>
+  <text x="46" y="126" font-size="15" fill="#4b4b4b">per-machine, carries secrets</text>
+  <text x="484" y="116" font-size="15" fill="#4b4b4b" text-anchor="end">overrides the file</text>
 
-  <rect x="80" y="220" width="300" height="64" rx="10" fill="#ffffff" stroke="#0d0d0d" stroke-width="3"/>
-  <text x="230" y="250" font-size="17" font-weight="600" fill="#0d0d0d" text-anchor="middle">config file</text>
-  <text x="230" y="270" font-size="14" fill="#4b4b4b" text-anchor="middle">per-project defaults</text>
+  <rect x="23" y="148" width="484" height="48" rx="10" fill="#ffffff" stroke="#e3e3e0" stroke-width="1"/>
+  <text x="46" y="170" font-size="16" font-weight="600" fill="#0d0d0d">config file</text>
+  <text x="46" y="188" font-size="15" fill="#4b4b4b">checked in, reviewed, shared</text>
+  <text x="484" y="178" font-size="15" fill="#4b4b4b" text-anchor="end">overrides defaults</text>
 
-  <rect x="80" y="140" width="300" height="64" rx="10" fill="#ffffff" stroke="#0d0d0d" stroke-width="3"/>
-  <text x="230" y="170" font-size="17" font-weight="600" fill="#0d0d0d" text-anchor="middle">environment</text>
-  <text x="230" y="190" font-size="14" fill="#4b4b4b" text-anchor="middle">secrets, per-machine</text>
+  <rect x="23" y="210" width="484" height="48" rx="10" fill="#f6f6f4" stroke="#e3e3e0" stroke-width="1"/>
+  <text x="46" y="232" font-size="16" font-weight="600" fill="#0d0d0d">defaults</text>
+  <text x="46" y="250" font-size="15" fill="#4b4b4b">every layer above is optional</text>
+  <text x="484" y="240" font-size="15" fill="#4b4b4b" text-anchor="end">lowest precedence</text>
 
-  <rect x="80" y="60" width="300" height="64" rx="10" fill="#1f883d"/>
-  <text x="230" y="90" font-size="17" font-weight="600" fill="#ffffff" text-anchor="middle">flags</text>
-  <text x="230" y="110" font-size="14" fill="#e6f2ea" text-anchor="middle">highest precedence</text>
-
-  <rect x="440" y="60" width="600" height="304" rx="12" fill="#ffffff" stroke="#e3e3e0" stroke-width="2"/>
-  <text x="472" y="104" font-size="18" font-weight="600" fill="#0d0d0d">Why this order</text>
-  <text x="472" y="142" font-size="16" fill="#4b4b4b">· Flags change one run, never committed, never shipped.</text>
-  <text x="472" y="174" font-size="16" fill="#4b4b4b">· Environment varies per machine and carries secrets.</text>
-  <text x="472" y="206" font-size="16" fill="#4b4b4b">· The file is checked in: stable, reviewable, shared.</text>
-  <text x="472" y="238" font-size="16" fill="#4b4b4b">· Defaults exist so every layer is optional.</text>
-  <text x="472" y="286" font-size="15" fill="#1f883d">The loader applies layers bottom-up and</text>
-  <text x="472" y="308" font-size="15" fill="#1f883d">fails loudly on any conflict that matters.</text>
-
-  <text x="80" y="440" font-size="18" fill="#4b4b4b">Precedence is a policy. Write it down, and let the code follow the policy instead of inventing it.</text>
+  <line x1="554" y1="258" x2="554" y2="54" stroke="#1f883d" stroke-width="2"/>
+  <path d="M548 64 L554 44 L560 64" fill="none" stroke="#1f883d" stroke-width="2"/>
+  <text x="560" y="163" font-size="15" font-weight="600" fill="#1f883d">wins</text>
 </svg>

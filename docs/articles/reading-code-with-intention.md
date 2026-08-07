@@ -30,7 +30,7 @@ The single most useful question when reading unfamiliar code is: who calls this,
 
 When I picked up kit's codebase after a month away from it, I didn't reread it. I re-traced it: the three command entry points, the config path, the layer where output is rendered. Fifteen minutes of map-building told me everything I needed to start shipping again. I build the map fast and roughly: a list of entry points, the functions each one reaches, and the data that flows between them. Most understanding comes from this skeleton, not from deep reading. I defer deep reading until the map says a specific function is load-bearing.
 
-![Reading code from behavior inward: follow the call graph, deep-read only the load-bearing parts](/diagrams/diagram-call-graph.svg)
+![Most of a codebase is supporting code; reading time is wasted there. The call graph shows which parts carry weight, so deep reading goes where it pays.](/diagrams/diagram-call-graph.svg)
 
 ## Read the tests first
 

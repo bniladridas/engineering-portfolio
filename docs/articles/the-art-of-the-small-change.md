@@ -33,7 +33,7 @@ The change that taught me this was adding layered config to kit. It was one feat
 
 Two small, individually reviewable diffs. The first one looked trivial, which is the point. The second one was small enough that a reviewer could actually check the precedence logic instead of skimming past it.
 
-![Split the change: structure first, behavior second, and the repo stays green the whole time](/diagrams/diagram-small-change.svg)
+![Structure and behavior are reviewed differently, so splitting them lets each commit be judged on its own and keeps the repo green throughout.](/diagrams/diagram-small-change.svg)
 
 The technique that unlocks this is finding the seam where the work can be divided. Usually the seam is a behavior change versus a structure change. Rename first, in one commit, with no behavior change. Review that, merge it. Then change the behavior in the next commit. Two small, reviewable, individually reversible changes instead of one scary diff.
 

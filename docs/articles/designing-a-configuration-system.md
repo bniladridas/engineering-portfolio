@@ -103,7 +103,7 @@ The order I settled on is boring, which is how I know it's right:
 3. **Config file**: checked into the repo. Stable, reviewable, shared.
 4. **Defaults**: baked into the tool. The floor that makes every other layer optional.
 
-![Config precedence in kit: flags beat environment beat file beat defaults](/diagrams/diagram-config-layers.svg)
+![Precedence follows lifetime: flags live for one run, the environment for one machine, the file for the whole project, defaults forever. The shorter-lived a value is, the more it overrides.](/diagrams/diagram-config-layers.svg)
 
 Each layer overrides the ones below it. Higher wins; the loader applies layers bottom-up.
 
@@ -115,7 +115,7 @@ That reasoning is what makes the pyramid survive new features. Every new config 
 
 The first implementation was a single function. It parsed the file, flattened environment overrides, validated required keys, and returned the merged result: forty dense lines, one wall of text. It worked, and I couldn't maintain it.
 
-![Refactoring as a map: a wall becomes rooms with names](/diagrams/diagram-refactor-map.svg)
+![A wall of code makes the reader hold everything in memory; named rooms let the reader choose where to look. Naming a chunk is what makes it a room.](/diagrams/diagram-refactor-map.svg)
 
 The refactor split it into three functions whose names are a map of the behavior:
 

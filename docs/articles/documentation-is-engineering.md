@@ -38,7 +38,7 @@ Every undocumented decision becomes a question. Questions travel through chat ch
 
 On the auth service, the onboarding flow used to be three people deep by the end of the week, because every new engineer asked the same six questions. I wrote those answers down once. Onboarding dropped to a day of reading and a few real questions. The same answers, written once, replaced two dozen hours of repeated explanations per hire.
 
-![The docs loop: one commit, two deliverables (the code change and the doc that explains it)](/diagrams/diagram-docs-loop.svg)
+![Docs in the same commit as the code cannot drift: the change and its explanation are reviewed together and stay honest.](/diagrams/diagram-docs-loop.svg)
 
 Written once, a good doc answers the question forever. The economics are brutal in favor of writing: an hour of documentation can save dozens of hours of questions over a project's life. Teams under-invest in docs not because the math is bad, but because the payoff is delayed. It shows up next quarter, not today.
 
