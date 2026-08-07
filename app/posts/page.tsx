@@ -2,7 +2,11 @@ import Link from 'next/link'
 import { getPosts, formatDate } from '@/lib/content'
 import Badge from '@/components/Badge'
 
-export const metadata = { title: 'LinkedIn Posts — Palmshed' }
+export const metadata = {
+  title: 'LinkedIn Posts — Palmshed',
+  description: 'Short posts on engineering practice, ready to publish as-is.',
+  alternates: { canonical: '/posts' },
+}
 
 export default function PostsPage() {
   const posts = getPosts()

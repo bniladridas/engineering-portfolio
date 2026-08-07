@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" font-family="Inter, IBM Plex Sans, sans-serif">
+  <rect width="1200" height="480" fill="#ffffff"/>
+  <text x="80" y="60" font-size="28" font-weight="600" fill="#0d0d0d">The public build loop</text>
+  <text x="80" y="96" font-size="20" fill="#4b4b4b">Publishing the process invites corrections, and corrections make the work better.</text>
+
+  <rect x="80" y="160" width="220" height="80" rx="10" fill="#ffffff" stroke="#0d0d0d" stroke-width="3"/>
+  <text x="190" y="196" font-size="17" font-weight="600" fill="#0d0d0d" text-anchor="middle">show the work</text>
+  <text x="190" y="220" font-size="14" fill="#4b4b4b" text-anchor="middle">decisions, not wins</text>
+
+  <rect x="360" y="160" width="220" height="80" rx="10" fill="#1f883d"/>
+  <text x="470" y="196" font-size="17" font-weight="600" fill="#ffffff" text-anchor="middle">readers audit</text>
+  <text x="470" y="220" font-size="14" fill="#e6f2ea" text-anchor="middle">edge cases, corrections</text>
+
+  <rect x="640" y="160" width="220" height="80" rx="10" fill="#ffffff" stroke="#0d0d0d" stroke-width="3"/>
+  <text x="750" y="196" font-size="17" font-weight="600" fill="#0d0d0d" text-anchor="middle">build better</text>
+  <text x="750" y="220" font-size="14" fill="#4b4b4b" text-anchor="middle">feedback is compound</text>
+
+  <rect x="920" y="160" width="200" height="80" rx="10" fill="#ffffff" stroke="#0d0d0d" stroke-width="3"/>
+  <text x="1020" y="196" font-size="17" font-weight="600" fill="#0d0d0d" text-anchor="middle">keep the record</text>
+  <text x="1020" y="220" font-size="14" fill="#4b4b4b" text-anchor="middle">docs your own growth</text>
+
+  <line x1="300" y1="200" x2="360" y2="200" stroke="#0d0d0d" stroke-width="3"/>
+  <line x1="580" y1="200" x2="640" y2="200" stroke="#0d0d0d" stroke-width="3"/>
+  <line x1="860" y1="200" x2="920" y2="200" stroke="#0d0d0d" stroke-width="3"/>
+
+  <line x1="1020" y1="240" x2="1020" y2="340" stroke="#0d0d0d" stroke-width="3"/>
+  <line x1="1020" y1="340" x2="190" y2="340" stroke="#0d0d0d" stroke-width="3"/>
+  <line x1="190" y1="340" x2="190" y2="240" stroke="#0d0d0d" stroke-width="3"/>
+  <text x="605" y="362" font-size="15" fill="#4b4b4b" text-anchor="middle">the honest version compounds; the highlight reel doesn't</text>
+
+  <text x="80" y="440" font-size="18" fill="#4b4b4b">Build in public honestly: ship the process, post the failures, and let the record teach you.</text>
+</svg>

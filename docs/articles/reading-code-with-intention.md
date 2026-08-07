@@ -5,6 +5,9 @@ date: 2026-08-26
 status: published
 tags: [debugging, reading-code, craft]
 intro: We are taught to write code, rarely to read it. But reading is most of the job, and it is a skill that improves like any other.
+references:
+  - label: Palmshed — reading the codebase's call graph before the first change
+    url: https://github.com/palmshed/palmshed
 ---
 
 # Reading Code With Intention
@@ -25,7 +28,9 @@ I read from the outside in. I start with what the system is supposed to do — t
 
 The single most useful question when reading unfamiliar code is: who calls this, and what does it call? That graph is the skeleton of the system. Everything else — the bodies, the comments, the formatting — is flesh.
 
-I build the map fast and roughly: a list of entry points, the functions each one reaches, and the data that flows between them. Most understanding comes from this skeleton, not from deep reading. I defer deep reading until the map says a specific function is load-bearing.
+When I picked up Palmshed's codebase after a month away from it, I didn't reread it. I re-traced it: the three command entry points, the config path, the layer where output is rendered. Fifteen minutes of map-building told me everything I needed to start shipping again. I build the map fast and roughly: a list of entry points, the functions each one reaches, and the data that flows between them. Most understanding comes from this skeleton, not from deep reading. I defer deep reading until the map says a specific function is load-bearing.
+
+![Reading code from behavior inward — follow the call graph, deep-read only the load-bearing parts](/diagrams/diagram-call-graph.svg)
 
 ## Read the tests first
 

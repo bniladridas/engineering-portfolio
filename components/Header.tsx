@@ -1,9 +1,11 @@
 import Link from 'next/link'
+import HeaderSearch from './HeaderSearch'
 
 const nav = [
   { href: '/articles', label: 'Articles' },
   { href: '/posts', label: 'Posts' },
-  { href: '/featured', label: 'Featured' },
+  { href: '/open-source', label: 'Open Source' },
+  { href: '/now', label: 'Now' },
   { href: '/about', label: 'About' },
 ]
 
@@ -41,6 +43,7 @@ export default function Header() {
             </Link>
           ))}
         </nav>
+        <HeaderSearch />
       </div>
     </header>
   )

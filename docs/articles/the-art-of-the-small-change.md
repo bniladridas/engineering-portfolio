@@ -5,6 +5,9 @@ date: 2026-08-05
 status: published
 tags: [engineering-practice, workflows, review]
 intro: Big changes are hard to review, hard to roll back, and hard to reason about. The small change is the unit of safe engineering.
+references:
+  - label: Palmshed PR #30 — structure change, then behavior change, in two commits
+    url: https://github.com/palmshed/palmshed/pull/30
 ---
 
 # The Art of the Small Change
@@ -22,6 +25,15 @@ Small changes isolate variables. One change, one decision, one review. When it b
 ## The size of a change is a design decision
 
 Splitting work into small changes is not a scheduling accident. It is a design decision, made deliberately, and it often requires designing the intermediate states.
+
+The change that taught me this was adding layered config to Palmshed. It was one feature, and my instinct was to write it as one PR. Instead, I split it the way I'd split a dependency:
+
+1. First PR: rename the config type and move it into its own module. Zero behavior change. Reviewed and merged on its own.
+2. Second PR: add the file layer on top of the existing defaults. One new behavior, landing on clean seams.
+
+Two small, individually reviewable diffs. The first one looked trivial — which is the point. The second one was small enough that a reviewer could actually check the precedence logic instead of skimming past it.
+
+![Split the change — structure first, behavior second, and the repo stays green the whole time](/diagrams/diagram-small-change.svg)
 
 The technique that unlocks this is finding the seam where the work can be divided. Usually the seam is a behavior change versus a structure change. Rename first, in one commit, with no behavior change — review that, merge it. Then change the behavior in the next commit. Two small, reviewable, individually reversible changes instead of one scary diff.
 

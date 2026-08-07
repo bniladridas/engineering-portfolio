@@ -5,6 +5,11 @@ date: 2026-07-22
 status: published
 tags: [architecture, design, maintainability]
 intro: The architecture that survives is the one that anticipates change — not by predicting the future, but by making change cheap.
+references:
+  - label: Auth service — three subsystems, one stable contract
+    url: https://github.com/palmshed/notes/blob/main/auth-service.md
+  - label: Palmshed — layered config design note
+    url: https://github.com/palmshed/notes/blob/main/palmshed-config.md
 ---
 
 # Designing Maintainable Systems
@@ -27,6 +32,10 @@ Maintainable design flips the assumption. It starts from "requirements will chan
 
 Every dependency is a promise. When component A depends on component B, any change to B risks A. Dependencies are not free; they are a recurring tax, paid on every future change to either side.
 
+The auth service I built was designed around one seam from the start: the token store. Everything that stores or reads tokens goes through a single adapter. When the team moved from a self-hosted store to a managed one, the migration was a single file — one adapter swapped for another, the contract unchanged. The alternative, call sites touching the store directly, would have made that migration a two-week project instead of a two-day one.
+
+![The boundary absorbs change — a stable interface between volatile callers and volatile implementation](/diagrams/diagram-boundary.svg)
+
 The skill is not eliminating dependencies — that's impossible — but placing them deliberately. Couple to stable things: interfaces, data shapes, contracts. Couple to volatile things only through a narrow seam. When the underlying library changes, one adapter absorbs it instead of a hundred call sites.
 
 I look for the places where a change forces touching many files. Each such place is a design smell, not a testament to thoroughness. It means the boundary is in the wrong spot.
@@ -37,11 +46,13 @@ There is a kind of architecture that looks beautiful in a diagram and is brutal 
 
 The maintainable system favors predictability over elegance. I want to open a file and guess what it does, from the name, without reading a third of it. That predictability comes from consistency: same shape for same jobs, same conventions, same failure modes. Novelty is the enemy of maintainability. Every time a system does something differently, the next reader pays.
 
+In Palmshed, every command follows the same three-part shape: parse args, load config, run. It is deliberately repetitive. A new command can be written by copying the previous one and changing the middle. Repetition with a consistent shape beats abstraction that hides the shape.
+
 ## The design document as memory
 
 Architecture decisions are expensive to make and easy to forget. Within six months, no one remembers why the retry logic lives in the gateway, or why the cache is eventual-consistency-tolerant. They only know it is that way, and they change it at their peril.
 
-A one-page design note, written when the decision is made, preserves that knowledge. It does not need to be long. It needs to record: the problem, the chosen approach, the alternatives considered, and the one or two factors that tipped the decision. That page saves more rework than most tests.
+A one-page design note, written when the decision is made, preserves that knowledge. It does not need to be long. It needs to record: the problem, the chosen approach, the alternatives considered, and the one or two factors that tipped the decision. The auth service's design note is two pages and covers the token format, the session model, and why we rejected the alternative we almost shipped. That page saves more rework than most test suites.
 
 ## Leave the design better than you found it
 

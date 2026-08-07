@@ -1,7 +1,12 @@
 import { getArticles, formatDate } from '@/lib/content'
 import ContentCard from '@/components/ContentCard'
 
-export const metadata = { title: 'Articles — Palmshed' }
+export const metadata = {
+  title: 'Articles — Palmshed',
+  description:
+    'Long-form engineering writing on maintainable systems, developer tools, open source, and building software that lasts.',
+  alternates: { canonical: '/articles' },
+}
 
 export default function ArticlesPage() {
   const articles = getArticles()

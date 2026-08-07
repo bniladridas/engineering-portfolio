@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" font-family="Inter, IBM Plex Sans, sans-serif">
+  <rect width="1200" height="480" fill="#ffffff"/>
+  <text x="80" y="60" font-size="28" font-weight="600" fill="#0d0d0d">The login form is the front door</text>
+  <text x="80" y="96" font-size="20" fill="#4b4b4b">Keep the boring list load-bearing, and the failure paths become the design.</text>
+
+  <rect x="80" y="150" width="170" height="70" rx="10" fill="#ffffff" stroke="#0d0d0d" stroke-width="3"/>
+  <text x="165" y="183" font-size="16" font-weight="600" fill="#0d0d0d" text-anchor="middle">credentials</text>
+  <text x="165" y="203" font-size="13" fill="#4b4b4b" text-anchor="middle">rate-limited</text>
+
+  <rect x="310" y="150" width="170" height="70" rx="10" fill="#1f883d"/>
+  <text x="395" y="183" font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">verify</text>
+  <text x="395" y="203" font-size="13" fill="#e6f2ea" text-anchor="middle">slow, salted hash</text>
+
+  <rect x="540" y="150" width="170" height="70" rx="10" fill="#ffffff" stroke="#0d0d0d" stroke-width="3"/>
+  <text x="625" y="183" font-size="16" font-weight="600" fill="#0d0d0d" text-anchor="middle">issue token</text>
+  <text x="625" y="203" font-size="13" fill="#4b4b4b" text-anchor="middle">short-lived, scoped</text>
+
+  <rect x="770" y="150" width="170" height="70" rx="10" fill="#ffffff" stroke="#0d0d0d" stroke-width="3"/>
+  <text x="855" y="183" font-size="16" font-weight="600" fill="#0d0d0d" text-anchor="middle">authorize</text>
+  <text x="855" y="203" font-size="13" fill="#4b4b4b" text-anchor="middle">policy, not boolean</text>
+
+  <line x1="250" y1="185" x2="310" y2="185" stroke="#0d0d0d" stroke-width="3"/>
+  <line x1="480" y1="185" x2="540" y2="185" stroke="#0d0d0d" stroke-width="3"/>
+  <line x1="710" y1="185" x2="770" y2="185" stroke="#0d0d0d" stroke-width="3"/>
+
+  <rect x="770" y="280" width="170" height="70" rx="10" fill="#ffffff" stroke="#82071e" stroke-width="3"/>
+  <text x="855" y="313" font-size="16" font-weight="600" fill="#0d0d0d" text-anchor="middle">session ends</text>
+  <text x="855" y="333" font-size="13" fill="#4b4b4b" text-anchor="middle">design the expiry path</text>
+
+  <line x1="855" y1="220" x2="855" y2="280" stroke="#0d0d0d" stroke-width="3"/>
+
+  <text x="80" y="440" font-size="18" fill="#4b4b4b">Authentication is a foundation: decided early, built carefully, and judged by how it behaves under pressure.</text>
+</svg>

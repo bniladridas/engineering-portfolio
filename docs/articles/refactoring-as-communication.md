@@ -5,6 +5,9 @@ date: 2026-07-29
 status: published
 tags: [refactoring, communication, code-review]
 intro: A refactor is a letter to the next engineer. Every rename, every extracted function, every deleted comment is a sentence in it.
+references:
+  - label: Palmshed PR #21 — config loader split into named functions
+    url: https://github.com/palmshed/palmshed/pull/21
 ---
 
 # Refactoring As Communication
@@ -15,7 +18,7 @@ For a long time I understood refactoring as a mechanical act: improving the code
 
 ## The structure is the documentation
 
-Readers of code get most of their information from shape, not from comments. A function named `loadUser` with a return type and no side effects tells me almost everything I need without a single line of prose. A function named `process` that takes `data` and returns `result` tells me nothing — I must read the whole body to learn what I could have gotten from a good name in one glance.
+Readers of code get most of their information from shape, not from comments. A function named `loadConfig` with a return type and no side effects tells me almost everything I need without a single line of prose. A function named `process` that takes `data` and returns `result` tells me nothing — I must read the whole body to learn what I could have gotten from a good name in one glance.
 
 Refactoring is rewriting that structure to be self-documenting. The best refactors remove the need for explanation. A clean boundary, a revealing name, a function that does one thing — these communicate continuously, with zero maintenance cost.
 
@@ -23,11 +26,17 @@ Refactoring is rewriting that structure to be self-documenting. The best refacto
 
 Code is read far more often than it is written. The dominant cost of any codebase is reading it, and names are what the reader sees first. A good name answers the reader's first question — what is this? — before they spend any effort.
 
-I take names seriously in refactors. When a function's name requires its body to be understood, that's not a comment problem; that's a name problem. When a variable called `data` would be better called `pendingInvites`, the rename is not cosmetic. It is a transmission of meaning that would otherwise live only in the author's head.
+The most instructive refactor I did in Palmshed was a single rename: `apply` became `applyEnvOverrides`. Same body, same call sites. But the original name had been the reason the function kept growing — every new override rule went into `apply` because "apply" accepted anything. The new name set a boundary the code respected. The rename was not cosmetic; it was a transmission of meaning that had been living only in my head.
+
+I take names seriously in refactors. When a function's name requires its body to be understood, that's not a comment problem; that's a name problem. When a variable called `data` would be better called `pendingInvites`, the rename is a correction of the message, not a style preference.
 
 ## Extraction is turning a wall into a map
 
 Long functions are walls of text. The reader must hold the entire thing in working memory to understand any part of it. Extraction breaks the wall into rooms with labels, so the reader can decide where to look instead of absorbing everything.
+
+![Refactoring as a map — a wall becomes rooms with names, so the reader chooses where to look](/diagrams/diagram-refactor-map.svg)
+
+When I split Palmshed's config loader, the original function did three jobs: parse the file, flatten environment overrides, and validate required keys. The refactor turned it into three functions whose names are a map of the behavior. The deleted comment — "parse and merge config, then check required fields" — had been describing exactly what the three names now say for free. Deleting it was part of the refactor, not a loss.
 
 The test for extraction is not length. It's whether a chunk has a single coherent job that can be named. If I can say "this part validates the payload" and "this part formats the error," the function deserves to be two functions. The act of naming those chunks — and deleting the old comment that described them — is the refactor.
 

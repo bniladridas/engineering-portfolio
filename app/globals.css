@@ -63,6 +63,18 @@ a:hover {
   left: 0;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .container {
   width: 100%;
   max-width: 1080px;
@@ -180,4 +192,155 @@ a:hover {
 .prose a {
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  transition: background-color 120ms ease;
+}
+
+.button--primary {
+  background: var(--green);
+  color: var(--white);
+}
+
+.button--secondary {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--black);
+}
+
+.button:hover {
+  text-decoration: none;
+}
+
+.button--primary:hover {
+  background: #176f32;
+}
+
+.button--secondary:hover {
+  background: var(--surface-muted);
+}
+
+.toc a:hover {
+  color: var(--black);
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    padding: 0 var(--space-4);
+  }
+}
+
+/* highlight.js — GitHub light palette, tuned to the design system */
+.hljs {
+  color: #24292e;
+  background: transparent;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #6a737d;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: #cf222e;
+}
+
+.hljs-number,
+.hljs-literal,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag .hljs-attr {
+  color: #0550ae;
+}
+
+.hljs-string,
+.hljs-doctag {
+  color: #0a3069;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: #8250df;
+  font-weight: 600;
+}
+
+.hljs-type,
+.hljs-class .hljs-title {
+  color: #116329;
+}
+
+.hljs-tag,
+.hljs-name,
+.hljs-attribute {
+  color: #116329;
+}
+
+.hljs-regexp,
+.hljs-link {
+  color: #0a3069;
+}
+
+.hljs-symbol,
+.hljs-bullet {
+  color: #24292e;
+}
+
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #8250df;
+}
+
+.hljs-meta {
+  color: #6a737d;
+}
+
+.hljs-deletion {
+  color: #82071e;
+  background: #ffebe9;
+}
+
+.hljs-addition {
+  color: #116329;
+  background: #dafbe1;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: 600;
 }

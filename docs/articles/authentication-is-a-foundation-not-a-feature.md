@@ -5,6 +5,9 @@ date: 2026-08-19
 status: published
 tags: [authentication, security, backend]
 intro: Every auth mistake is invisible at the moment it's made and expensive the moment it's found. That's why it has to be done right the first time.
+references:
+  - label: Auth service design note — token model and session lifetimes
+    url: https://github.com/palmshed/notes/blob/main/auth-service.md
 ---
 
 # Authentication Is a Foundation, Not a Feature
@@ -16,6 +19,8 @@ Authentication sits at the bottom of almost every system I've built. It is the o
 ## The cheapest fix is at design time
 
 The interesting thing about auth is that retrofitting it is dramatically harder than building it in. Changing a system's trust model after it ships means migrating users, replaying sessions, and defending decisions that were made before the stakes were clear.
+
+I built the auth service for a product that was shipping to a few hundred beta users. The temptation was to "keep it simple and fix it later." The decision that saved us was choosing the token model up front — short-lived access tokens with hashed, revocable refresh tokens — even though the first version didn't strictly need it. When the beta grew to thousands of users and a security review arrived, nothing had to change. The design had absorbed the growth without a migration.
 
 This is why I treat auth as a design constraint from the first commit, not a feature to bolt on later. The choices that matter — who owns identity, what the session lifetime is, what a "password reset" means, how scopes and roles are represented — are architecture decisions. They shape every feature that comes after.
 
@@ -37,6 +42,8 @@ A useful mental model separates authentication from authorization, and both from
 
 Systems that blur these get into trouble. A session token is used as proof of identity, or a role is stored in a cookie the client can edit, or "admin" becomes a boolean instead of a policy. Each blur is a bug waiting for a motivated user.
 
+![The auth flow — credentials, verify, issue token, authorize, and the session that ends](/diagrams/diagram-auth-flow.svg)
+
 I keep the model explicit, even in small systems. Who you are, what you can do, and how long that lasts should be three different questions with three different answers.
 
 ## Failure is a feature — design it
@@ -44,6 +51,8 @@ I keep the model explicit, even in small systems. Who you are, what you can do, 
 The most underrated part of auth is its failure modes. What happens when the session expires mid-checkout? When a user forgets their password? When a token is leaked? These flows are where users feel the system's trustworthiness, and where attackers probe it.
 
 Designing failure modes well means treating the forgotten-password path with the same care as the login path. It means a logout that actually invalidates the session server-side. It means never revealing in error messages whether an email is registered. The smooth paths are where you're measured; the failure paths are where you're attacked.
+
+In the auth service, the most reviewed file is not the login handler. It's the token refresh path — the one that runs on every expired session, handles the race between two devices, and decides when a refresh token must be rotated. Every interesting failure lives there, and designing it deliberately is what makes the happy path feel effortless.
 
 ## Auth is infrastructure with a human face
 

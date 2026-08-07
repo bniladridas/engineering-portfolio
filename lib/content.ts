@@ -1,7 +1,7 @@
 import { readFileSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
 import matter from 'gray-matter'
-import type { Article, Card, Post, ProfileDoc } from './types'
+import type { Article, Card, Post, ProfileDoc, Reference } from './types'
 
 const DOCS = join(process.cwd(), 'docs')
 
@@ -33,6 +33,7 @@ export function getArticles(): Article[] {
         date: data.date as string,
         tags: (data.tags as string[]) || [],
         intro: (data.intro as string) || '',
+        references: (data.references as Reference[]) || [],
         content: stripLeadingTitle(content),
         words: words(content),
       }

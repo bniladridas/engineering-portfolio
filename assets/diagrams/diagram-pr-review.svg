@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" font-family="Inter, IBM Plex Sans, sans-serif">
+  <rect width="1200" height="480" fill="#ffffff"/>
+  <text x="80" y="60" font-size="28" font-weight="600" fill="#0d0d0d">A contribution is a small cycle, not an event</text>
+  <text x="80" y="96" font-size="20" fill="#4b4b4b">Contributor → review → revision → merge: the loop that makes open source work.</text>
+
+  <rect x="80" y="160" width="200" height="80" rx="10" fill="#ffffff" stroke="#0d0d0d" stroke-width="3"/>
+  <text x="180" y="200" font-size="18" font-weight="600" fill="#0d0d0d" text-anchor="middle">contribution</text>
+  <text x="180" y="222" font-size="15" fill="#4b4b4b" text-anchor="middle">good faith, not perfect</text>
+
+  <rect x="340" y="160" width="200" height="80" rx="10" fill="#ffffff" stroke="#0d0d0d" stroke-width="3"/>
+  <text x="440" y="200" font-size="18" font-weight="600" fill="#0d0d0d" text-anchor="middle">review</text>
+  <text x="440" y="222" font-size="15" fill="#4b4b4b" text-anchor="middle">point · suggest · why</text>
+
+  <rect x="600" y="160" width="200" height="80" rx="10" fill="#1f883d"/>
+  <text x="700" y="200" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle">revision</text>
+  <text x="700" y="222" font-size="15" fill="#e6f2ea" text-anchor="middle">feedback is data</text>
+
+  <rect x="860" y="160" width="200" height="80" rx="10" fill="#ffffff" stroke="#0d0d0d" stroke-width="3"/>
+  <text x="960" y="200" font-size="18" font-weight="600" fill="#0d0d0d" text-anchor="middle">merge + thank</text>
+  <text x="960" y="222" font-size="15" fill="#4b4b4b" text-anchor="middle">contributors grow</text>
+
+  <line x1="280" y1="200" x2="340" y2="200" stroke="#0d0d0d" stroke-width="3"/>
+  <line x1="540" y1="200" x2="600" y2="200" stroke="#0d0d0d" stroke-width="3"/>
+  <line x1="800" y1="200" x2="860" y2="200" stroke="#0d0d0d" stroke-width="3"/>
+
+  <line x1="960" y1="240" x2="960" y2="340" stroke="#0d0d0d" stroke-width="3"/>
+  <line x1="960" y1="340" x2="180" y2="340" stroke="#0d0d0d" stroke-width="3"/>
+  <line x1="180" y1="340" x2="180" y2="240" stroke="#0d0d0d" stroke-width="3"/>
+  <text x="570" y="362" font-size="15" fill="#4b4b4b" text-anchor="middle">the cycle repeats — each loop makes the next contribution easier</text>
+
+  <text x="80" y="440" font-size="18" fill="#4b4b4b">Translate, don't gatekeep. The repository that grows contributors is the one that treats strangers' time as precious.</text>
+</svg>

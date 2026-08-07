@@ -3,6 +3,10 @@ import { getArticles, getCards } from '@/lib/content'
 import ContentCard from '@/components/ContentCard'
 import Badge from '@/components/Badge'
 
+export const metadata = {
+  alternates: { canonical: '/' },
+}
+
 export default function Home() {
   const articles = getArticles()
   const cards = getCards()
@@ -50,28 +54,10 @@ export default function Home() {
             everything I make — systems, tools, and open source.
           </p>
           <div style={{ display: 'flex', gap: 'var(--space-4)' }}>
-            <a
-              href={`/articles/${latest.slug}`}
-              style={{
-                background: 'var(--green)',
-                color: 'var(--white)',
-                padding: '12px 24px',
-                borderRadius: 8,
-                fontWeight: 600,
-              }}
-            >
+            <a href={`/articles/${latest.slug}`} className="button button--primary">
               Latest article
             </a>
-            <a
-              href="/about"
-              style={{
-                border: '1px solid var(--line)',
-                color: 'var(--black)',
-                padding: '12px 24px',
-                borderRadius: 8,
-                fontWeight: 600,
-              }}
-            >
+            <a href="/about" className="button button--secondary">
               About me
             </a>
           </div>

@@ -5,6 +5,11 @@ date: 2026-07-15
 status: published
 tags: [open-source, community, contribution]
 intro: Open source taught me more about engineering than any course did — not because the code is better, but because the process is real.
+references:
+  - label: Palmshed — built and maintained in public
+    url: https://github.com/palmshed/palmshed
+  - label: Pull request #14 — config loader review
+    url: https://github.com/palmshed/palmshed/pull/14
 ---
 
 # Lessons From Open Source
@@ -17,17 +22,23 @@ I started contributing to open source the way most people do: hesitantly, with a
 
 The first surprise was how ordinary the code is. The projects I admired were built by people making normal engineering decisions under pressure, just like everyone else. What distinguished them was not genius. It was process: clear guidelines, honest reviews, and an explicit understanding that any of it could be improved.
 
+I built Palmshed in public partly to hold myself to that standard. When I opened its config-loader for review, the response was the same as any well-run project: comments on reachability, on naming, on one branch that could never fire. None of it was about me. That is the norm the best projects set, and I now hold my own work to it.
+
 That freed me. I stopped treating a contribution as a performance and started treating it as a collaboration. The maintainers did not expect perfection. They expected a good-faith effort, a willingness to receive feedback, and respect for the project's conventions.
 
 ## Reviews taught me to separate code from self
 
 My first review came back with more comments than lines. It stung. Then I reread it and realized every comment was about the code, not about me. "This branch isn't reachable." "Can this fail?" "Naming." Nothing personal.
 
+![The contribution loop — contribution, review, revision, merge, repeat](/diagrams/diagram-pr-review.svg)
+
 That separation is the single most valuable habit open source gave me. It let me take criticism as data instead of as judgment, which made me dramatically faster to improve. Good codebases do this on purpose: they keep reviews technical, they explain reasoning, and they thank contributors for the work regardless of the outcome.
 
 ## Maintainers are translators, not gatekeepers
 
 Every repository is a small meeting of people who think differently about the same problem. The maintainer's real job is translation: converting a contributor's idea into the project's idioms, and the project's constraints into language a newcomer can act on.
+
+When a contributor opened an issue against Palmshed asking for "profiles," their mental model was a settings screen. The project's model is layered config. The useful response was not "rejected, by design." It was a translation: here's how profiles map onto the layers we already have, and here's what the API would look like. That translation closed the issue with a plan instead of a disappointment.
 
 I learned to write that kind of feedback — concrete, kind, and specific. Point at the line. Suggest the alternative. Say why. "This works, but the project's convention is X because Y." That style of feedback closes issues and grows contributors. The gatekeeper style — "not our problem, closing" — shrinks them.
 
