@@ -10,7 +10,7 @@ export default function NowPage() {
   const content = readFileSync(join(process.cwd(), 'docs', 'now.md'), 'utf8')
 
   return (
-    <div className="container" style={{ maxWidth: 760, paddingTop: 'var(--space-8)', paddingBottom: 'var(--space-8)' }}>
+    <div className="container" style={{ paddingTop: 'var(--space-8)', paddingBottom: 'var(--space-8)' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <p className="eyebrow">Now</p>
         <Badge tone="green">Updated</Badge>
