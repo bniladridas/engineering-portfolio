@@ -1,6 +1,6 @@
 # Now
 
-Last updated: September 2026.
+Last updated: August 2026.
 
 ## Building
 
