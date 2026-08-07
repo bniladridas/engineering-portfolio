@@ -42,6 +42,8 @@ export default function SearchPage() {
           padding: '14px 16px',
           fontSize: 17,
           fontFamily: 'var(--font-body)',
+          background: 'var(--white)',
+          color: 'var(--black)',
           border: '1px solid var(--line)',
           borderRadius: 10,
           outline: 'none',

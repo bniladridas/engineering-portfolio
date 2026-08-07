@@ -28,6 +28,8 @@ export default function HeaderSearch() {
           padding: '6px 10px',
           fontSize: 14,
           fontFamily: 'var(--font-body)',
+          background: 'var(--white)',
+          color: 'var(--black)',
           border: '1px solid var(--line)',
           borderRadius: 8,
           width: 130,
