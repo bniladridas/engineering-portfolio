@@ -1,0 +1,29 @@
+name: Link Check
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: |
+            --verbose
+            --no-progress
+            --timeout 30
+            --retry-wait-time 5
+            --exclude https://www.linkedin.com/
+            --exclude https://github.com/login
+            https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/sitemap.xml
+          fail: true

@@ -14,6 +14,6 @@ tag: article
 **Description:**
 An essay on why maintainability beats cleverness: interfaces that outlast implementations, the compounding effect of small decisions, and software that the next engineer can understand.
 
-**Link:** https://palmshed.dev/articles/building-software-that-lasts
+**Link:** https://bniladridas.github.io/engineering-portfolio/articles/building-software-that-lasts
 
 **Featured on:** Profile featured section, position 1.

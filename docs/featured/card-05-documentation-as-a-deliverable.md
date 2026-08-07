@@ -14,6 +14,6 @@ tag: article
 **Description:**
 Documentation is engineering, not an afterthought. A practical argument for treating docs as a first-class deliverable, and a simple rule that keeps them honest.
 
-**Link:** https://palmshed.dev/articles/documentation-is-engineering
+**Link:** https://bniladridas.github.io/engineering-portfolio/articles/documentation-is-engineering
 
 **Featured on:** Profile featured section.

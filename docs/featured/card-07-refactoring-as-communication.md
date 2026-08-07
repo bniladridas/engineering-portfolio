@@ -14,6 +14,6 @@ tag: article
 **Description:**
 Every rename and extraction is a sentence in a letter to the person who maintains the code next. A case for treating structure as documentation, and for refactoring continuously, not in big-bang rewrites.
 
-**Link:** https://palmshed.dev/articles/refactoring-as-communication
+**Link:** https://bniladridas.github.io/engineering-portfolio/articles/refactoring-as-communication
 
 **Featured on:** Profile featured section.

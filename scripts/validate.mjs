@@ -53,6 +53,16 @@ for (const dir of ['assets/cards', 'assets/icons', 'assets/logos', 'assets/diagr
   console.log(`OK    ${dir}: ${files.length} svg files`)
 }
 
+for (const dir of ['docs/articles', 'docs/linkedin', 'docs/featured']) {
+  for (const file of readdirSync(join(root, dir)).filter((f) => f.endsWith('.md'))) {
+    const text = readFileSync(join(root, dir, file), 'utf8')
+    if (text.includes('\u2014')) {
+      errors++
+      console.error(`FAIL  ${dir}/${file}: contains an em dash`)
+    }
+  }
+}
+
 if (errors > 0) {
   console.error(`\n${errors} problem(s) found`)
   process.exit(1)

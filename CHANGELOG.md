@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-08-07
+
+### Site
+
+- Redrawn all 11 article diagrams to an editorial scale: 600px canvas matching
+  the prose column, 15-16px labels, muted palette, no title bars or footer
+  takeaway lines, and arrowheads/curves on absolute coordinates.
+- Diagram captions now explain why each figure matters rather than restating
+  what it shows.
+- Removed the bordered look around diagram figures in articles.
+- Replaced dead `palmshed.dev` links in the featured cards with the live
+  GitHub Pages URLs.
+- Added lightweight CI: `ci.yml` (typecheck, content validation, build),
+  `links.yml` (weekly link check of the live site), `accessibility.yml`
+  (weekly Lighthouse audit), and `dependabot.yml` (npm + GitHub Actions).
+- Content validation now rejects em dashes anywhere in the docs.
+
 ## v1.0.0 · 2026-08-07
 
 First stable release of the Palmshed engineering portfolio.
