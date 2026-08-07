@@ -50,9 +50,29 @@ Short sentences. Concrete and specific. No filler. First person, but humble — 
 ```bash
 npm install
 npm run dev       # local development (http://localhost:3000)
-npm run build     # static generation
-npm start         # serve the production build
+npm run build     # static export into out/
+npx serve out     # preview the static export locally
 ```
+
+## Deploy to GitHub Pages
+
+The repository includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that builds the
+static export and publishes it to GitHub Pages on every push to `main`.
+
+One-time setup (repo settings → Pages):
+
+1. Set **Source** to **GitHub Actions**.
+2. Push to `main` — the workflow builds `out/` and deploys it.
+3. If this repo is private, GitHub Pages requires a paid plan; make the repo public (or upgrade)
+   for the deployment to succeed.
+
+Custom domain (optional):
+
+- When the site moves to a real domain (e.g. `notes.palmshed.dev`), add a `CNAME` file at the repo
+  root containing the domain and point the DNS record at GitHub Pages.
+- Until then, no `CNAME` is needed — the site lives at `https://<user>.github.io/engineering-portfolio/`.
+
+`404.html` is generated automatically by the static export.
 
 ## Content workflow
 
@@ -79,11 +99,12 @@ npm run typecheck    # TypeScript check
 
 ## Status
 
-- [x] Articles: 10 (each with diagrams, references, and concrete examples)
-- [x] LinkedIn posts: 20
-- [x] Portfolio cards: 10
+- [x] Articles: 11 (each with diagrams, references, and concrete examples)
+- [x] LinkedIn posts: 21
+- [x] Portfolio cards: 11
+- [x] Architecture notes: 8
 - [x] Profile: complete
 - [x] Design system: documented
 - [x] Assets: SVG cards, icons, logo, diagrams
 - [x] Prompts: image prompt library
-- [x] Site: Next.js, static generation, search, RSS, sitemap, JSON-LD
+- [x] Site: Next.js, static export, search, RSS, sitemap, JSON-LD
