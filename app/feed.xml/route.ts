@@ -16,7 +16,7 @@ export function GET() {
   const now = new Date().toUTCString()
   const items = [...getArticles(), ...getPosts()].map((entry) => {
     const isArticle = 'intro' in entry
-    const href = isArticle ? `/articles/${entry.slug}` : `/posts/${entry.slug}`
+    const href = isArticle ? `/articles/${entry.slug}/` : `/posts/${entry.slug}/`
     const description = isArticle ? entry.intro : entry.hook
     const item = `
   <item>

@@ -15,7 +15,7 @@ export default function Footer() {
       >
         <span>Software that outlasts its authors.</span>
         <a
-          href="/colophon"
+          href="/colophon/"
           style={{ color: 'var(--ink-secondary)', textDecoration: 'none' }}
         >
           Colophon

@@ -48,7 +48,7 @@ export default function ArchitecturePage() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)' }}>
               <Badge>{TOPIC_LABEL[note.topic] || note.topic}</Badge>
               <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 22, margin: 0 }}>
-                <a href={`/architecture/${note.slug}`} style={{ color: 'var(--ink)', textDecoration: 'none' }}>
+                <a href={`/architecture/${note.slug}/`} style={{ color: 'var(--ink)', textDecoration: 'none' }}>
                   {note.title}
                 </a>
               </h2>
@@ -56,7 +56,7 @@ export default function ArchitecturePage() {
                 {excerpt(note.content)}
               </p>
               <a
-                href={`/architecture/${note.slug}`}
+                href={`/architecture/${note.slug}/`}
                 style={{ color: 'var(--accent)', fontSize: 14, textDecoration: 'none' }}
               >
                 Read the note →

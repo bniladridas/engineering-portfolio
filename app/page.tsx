@@ -60,10 +60,10 @@ export default function Home() {
             everything I make — systems, tools, and open source.
           </p>
           <div style={{ display: 'flex', gap: 'var(--space-4)' }}>
-            <a href={`/articles/${latest.slug}`} className="button button--primary">
+            <a href={`/articles/${latest.slug}/`} className="button button--primary">
               Latest article
             </a>
-            <a href="/architecture" className="button button--secondary">
+            <a href="/architecture/" className="button button--secondary">
               Architecture notes
             </a>
           </div>
@@ -173,7 +173,7 @@ export default function Home() {
             Building in public changed how I work, and the practice matters more than the code.
           </p>
           <div style={{ display: 'flex', gap: 'var(--space-4)', marginTop: 'var(--space-5)' }}>
-            <a href="/open-source" className="button button--primary">
+            <a href="/open-source/" className="button button--primary">
               Open source
             </a>
             <a href={site.author.github} className="button button--secondary" target="_blank" rel="noopener noreferrer">

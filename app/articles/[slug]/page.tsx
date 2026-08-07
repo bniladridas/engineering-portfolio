@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const article = getArticle(slug)
   if (!article) return {}
-  const url = `${site.url}/articles/${article.slug}`
+  const url = `${site.url}/articles/${article.slug}/`
   return {
     title: `${article.title} — Palmshed`,
     description: article.intro,
@@ -55,7 +55,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     datePublished: article.date,
     author: { '@type': 'Person', name: site.author.name, url: site.url },
     publisher: { '@type': 'Person', name: site.author.name, url: site.url },
-    url: `${site.url}/articles/${article.slug}`,
+    url: `${site.url}/articles/${article.slug}/`,
     keywords: article.tags.join(', '),
   }
 
