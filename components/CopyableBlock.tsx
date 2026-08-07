@@ -12,7 +12,7 @@ export default function CopyableBlock({ title, content, label, children }: Copya
     <div className="copyable-block">
       <div className="copyable-block__header">
         <span className="eyebrow">{title}</span>
-        <CopyButton text={content} label={label} />
+        <CopyButton text={content} label={label ?? title.toLowerCase()} />
       </div>
       {children}
     </div>

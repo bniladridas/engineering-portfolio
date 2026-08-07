@@ -9,6 +9,8 @@ interface CopyButtonProps {
 
 export default function CopyButton({ text, label }: CopyButtonProps) {
   const [copied, setCopied] = useState(false)
+  const labelText = label ? label.toLowerCase() : ''
+  const copiedLabel = labelText ? labelText.charAt(0).toUpperCase() + labelText.slice(1) : 'Copied'
 
   async function copy() {
     try {
@@ -27,7 +29,7 @@ export default function CopyButton({ text, label }: CopyButtonProps) {
       className={`copy-control${copied ? ' copy-control--copied' : ''}`}
       aria-live="polite"
     >
-      {copied ? '✓ Copied' : `📋 Copy${label ? ` ${label}` : ''}`}
+      {copied ? `✓ ${copiedLabel} copied` : `📋 Copy${labelText ? ` ${labelText}` : ''}`}
     </button>
   )
 }
