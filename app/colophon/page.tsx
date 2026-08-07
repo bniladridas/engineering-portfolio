@@ -19,7 +19,7 @@ export default function ColophonPage() {
           {`
 ## Framework
 
-Next.js 15 with the App Router, React 19, and TypeScript. Every page is statically generated at
+Next.js 16 with the App Router, React 19, and TypeScript. Every page is statically generated at
 build time: the content is read from the repo and rendered to plain HTML, so there is no runtime
 server and nothing to maintain after deploy.
 
