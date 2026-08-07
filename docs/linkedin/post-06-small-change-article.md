@@ -20,4 +20,4 @@ I was measuring the wrong thing. The engineers I respect most ship the same amou
 
 Small changes build trust. Trust makes change cheap. Cheap change is the entire game.
 
-https://example.com/articles/the-art-of-the-small-change
+https://palmshed.dev/articles/the-art-of-the-small-change

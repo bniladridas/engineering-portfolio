@@ -246,11 +246,11 @@ There's a nice knock-on effect. Because secrets can only come from environment o
 The design work showed up in the tool in four places, and each one maps to a rule:
 
 - **`--help` lists every setting.** Because the config is documented in code, the help output is generated, not hand-maintained. It can't drift.
-- **`--dry-run` previews the resolved config.** Because precedence is a process, it can be shown before it's applied. The user sees *why* a value won, not just that it did.
+- **`--show` previews the resolved config.** Because precedence is a process, it can be shown before it's applied. The user sees *why* a value won, not just that it did.
 - **Errors point at the winning layer.** When a setting is invalid, the message says where it came from — file line 4, environment variable, or flag. Debugging a precedence bug becomes a single look, not a guessing game.
 - **No surprises by default.** The defaults are conservative: nothing is overwritten, no remote calls happen without opt-in, and the tool never mutates the config file.
 
-The dry-run flag is the one I'm proudest of, because it's the layering model made visible. `palmshed config --show` prints the resolved tree with each value and its source:
+The `--show` command is the one I'm proudest of, because it's the layering model made visible. `palmshed config --show` prints the resolved tree with each value and its source:
 
 ```
 format          json          (flag)
@@ -288,7 +288,7 @@ The merge tests are just as mechanical, and they encode the "replace, never appe
 - A flag `search.fuzzy` with a file `search` section resolves to a *whole new* `search` section, not a key-wise merge.
 - An environment secret with a file containing a same-named key fails the secret lint.
 
-The last one is the test I'm most attached to, because it tests a *security policy* as behavior rather than as a comment. Two test files deep in the suite encode the three rules that matter most — precedence, replace-over-merge, secrets-in-env — and none of them can silently drift.
+The last one is the test I'm most attached to, because it tests a *security policy* as behavior rather than as a comment. Deep in the suite, a handful of tests encode the three rules that matter most — precedence, replace-over-merge, secrets-in-env — and none of them can silently drift.
 
 ## What I got wrong
 

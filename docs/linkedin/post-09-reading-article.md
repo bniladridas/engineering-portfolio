@@ -18,4 +18,4 @@ For every hour I spend writing code, I spend several reading it — mine from la
 - When you're surprised, ask if the behavior is complex or the shape is gratuitously novel. Usually the second.
 - Debugging is reading under pressure: one hypothesis at a time, tested cheaply.
 
-https://example.com/articles/reading-code-with-intention
+https://palmshed.dev/articles/reading-code-with-intention

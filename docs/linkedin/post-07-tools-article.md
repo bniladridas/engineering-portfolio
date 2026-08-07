@@ -18,4 +18,4 @@ In *Developer Tools That People Remember*, I wrote about what separates the tool
 - Delight lives in the details: dry-run flags, honest progress bars, help that helps.
 - A tool is judged by the work it removes from a day, not the features it adds.
 
-https://example.com/articles/developer-tools-that-people-remember
+https://palmshed.dev/articles/developer-tools-that-people-remember

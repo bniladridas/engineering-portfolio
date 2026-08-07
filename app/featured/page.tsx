@@ -2,7 +2,6 @@ import { getCards } from '@/lib/content'
 import ContentCard from '@/components/ContentCard'
 
 export const metadata = { title: 'Featured — Palmshed' }
-
 export default function FeaturedPage() {
   const cards = getCards()
 
@@ -30,7 +29,7 @@ export default function FeaturedPage() {
             eyebrow={card.tag.toUpperCase()}
             title={card.title}
             subtitle={card.subtitle}
-            href={card.link.startsWith('/') ? card.link : '/featured'}
+            href={card.link}
             tag={card.tag}
           />
         ))}

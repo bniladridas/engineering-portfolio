@@ -1,7 +1,7 @@
 ---
 title: Engineering in Practice
 subtitle: Authentication, Flutter, backend, and developer tools
-link: /projects
+link: /architecture
 tag: projects
 ---
 
@@ -14,6 +14,6 @@ tag: projects
 **Description:**
 A selection of projects where the theory meets the day job: authentication systems, Flutter applications, backend services, and the developer tools that make them easier to build.
 
-**Link:** https://example.com/projects
+**Link:** https://palmshed.dev/architecture
 
 **Featured on:** Profile featured section, position 3 (best repository).

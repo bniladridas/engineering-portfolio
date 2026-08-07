@@ -89,7 +89,7 @@ export default function Home() {
                 eyebrow={card.tag.toUpperCase()}
                 title={card.title}
                 subtitle={card.subtitle}
-                href={card.link.startsWith('/') ? card.link : site.author.github}
+                href={card.link}
                 tag={card.tag}
               />
             ))}

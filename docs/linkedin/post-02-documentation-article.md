@@ -19,4 +19,4 @@ I wrote about this in my latest article, *Documentation Is Engineering*. The par
 
 Rule I now keep: if a change modifies behavior, it modifies the doc. Same commit, same review, same merge.
 
-https://example.com/articles/documentation-is-engineering
+https://palmshed.dev/articles/documentation-is-engineering

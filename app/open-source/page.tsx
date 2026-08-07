@@ -1,5 +1,4 @@
 import { getCards } from '@/lib/content'
-import { site } from '@/lib/site'
 import ContentCard from '@/components/ContentCard'
 import Markdown from '@/components/Markdown'
 import Badge from '@/components/Badge'
@@ -57,7 +56,7 @@ Open source taught me to separate feedback about code from judgment about people
               eyebrow={card.tag.toUpperCase()}
               title={card.title}
               subtitle={card.subtitle}
-              href={card.link.startsWith('/') ? card.link : site.author.github}
+              href={card.link}
               tag={card.tag}
             />
           ))}

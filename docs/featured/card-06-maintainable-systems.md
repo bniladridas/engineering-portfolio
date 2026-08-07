@@ -14,6 +14,6 @@ tag: article
 **Description:**
 Systems are never finished. The architecture that survives makes change cheap — boundaries where volatility lives, coupling to interfaces, and predictable structure over clever abstraction.
 
-**Link:** https://example.com/articles/designing-maintainable-systems
+**Link:** https://palmshed.dev/articles/designing-maintainable-systems
 
 **Featured on:** Profile featured section.

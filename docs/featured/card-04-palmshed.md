@@ -1,7 +1,7 @@
 ---
 title: Palmshed
 subtitle: A developer tool for people who care about maintainable output
-link: /projects/palmshed
+link: palmshed
 tag: project
 ---
 
@@ -14,6 +14,6 @@ tag: project
 **Description:**
 Palmshed is a command-line developer tool being built in public. It does one job well, treats error messages as an interface, and ships boring, predictable code on purpose.
 
-**Link:** https://example.com/projects/palmshed
+**Link:** https://github.com/palmshed/palmshed
 
 **Featured on:** Profile featured section, position 2.

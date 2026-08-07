@@ -21,4 +21,4 @@ New article, *Refactoring As Communication*:
 
 The sustainable form is continuous, not the big-bang rewrite. Small improvements, every change.
 
-https://example.com/articles/refactoring-as-communication
+https://palmshed.dev/articles/refactoring-as-communication

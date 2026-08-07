@@ -20,4 +20,4 @@ In *Designing Maintainable Systems*, I wrote about the shape that survives:
 
 The system designed to be improved is the system that will be.
 
-https://example.com/articles/designing-maintainable-systems
+https://palmshed.dev/articles/designing-maintainable-systems

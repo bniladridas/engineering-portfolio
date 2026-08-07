@@ -73,11 +73,12 @@ export function getCards(): Card[] {
   return readDir('featured')
     .map((file) => {
       const { data, content, slug } = readFile('featured', file)
+      const link = data.link as string
       return {
         slug,
         title: data.title as string,
         subtitle: data.subtitle as string,
-        link: data.link as string,
+        link: link.startsWith('/') || /^https?:\/\//.test(link) ? link : resolveRefUrl(link),
         tag: data.tag as string,
         content,
       }

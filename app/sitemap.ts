@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${site.url}/featured`, lastModified: now, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${site.url}/open-source`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${site.url}/now`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${site.url}/colophon`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
   ]
   for (const article of getArticles()) {
     pages.push({

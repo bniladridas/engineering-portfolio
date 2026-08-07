@@ -14,7 +14,12 @@ export default function Footer() {
         }}
       >
         <span>Software that outlasts its authors.</span>
-        <span>Palmshed</span>
+        <a
+          href="/colophon"
+          style={{ color: 'var(--ink-secondary)', textDecoration: 'none' }}
+        >
+          Colophon
+        </a>
       </div>
     </footer>
   )

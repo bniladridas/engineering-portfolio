@@ -14,6 +14,6 @@ tag: open-source
 **Description:**
 What contributing to open source taught me about reviews, communication, and treating strangers' time as precious — and why the practice matters more than the code.
 
-**Link:** https://example.com/articles/lessons-from-open-source
+**Link:** https://palmshed.dev/articles/lessons-from-open-source
 
 **Featured on:** Profile featured section, position 4 (open source contribution).

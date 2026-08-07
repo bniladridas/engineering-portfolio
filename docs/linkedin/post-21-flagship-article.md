@@ -7,7 +7,7 @@ topic: design-article
 hook: "I spent a month designing Palmshed's configuration system. The rules I ended up with were the opposite of the ones I started with."
 ---
 
-I spent a month designing Palmshed's configuration system, and I wrote the whole thing down — the full 3,500-word account is now live on the site.
+I spent a month designing Palmshed's configuration system, and I wrote the whole thing down — the full account is now live on the site.
 
 This is the design that made me reverse my instincts:
 
