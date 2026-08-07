@@ -7,6 +7,39 @@ import { slugifyHeading } from '@/lib/reading'
 import { withBase } from '@/lib/site'
 import Reveal from './Reveal'
 
+const BLOCK_NAMES = new Set(['figure', 'div', 'img'])
+
+interface HastChild {
+  type: string
+  tagName?: string
+  children?: HastChild[]
+}
+
+function rehypeUnwrapParagraphs() {
+  return (tree: { children?: HastChild[] }) => {
+    const unwrap = (nodes: HastChild[]): HastChild[] => {
+      const result: HastChild[] = []
+      for (const node of nodes) {
+        if (
+          node.tagName === 'p' &&
+          node.children &&
+          node.children.length > 0 &&
+          node.children.every(
+            (child) => child.type === 'element' && BLOCK_NAMES.has(child.tagName ?? ''),
+          )
+        ) {
+          result.push(...unwrap(node.children))
+        } else {
+          if (node.children) node.children = unwrap(node.children)
+          result.push(node)
+        }
+      }
+      return result
+    }
+    if (tree.children) tree.children = unwrap(tree.children)
+  }
+}
+
 function heading(level: 'h2' | 'h3') {
   const Tag = level
   return function Heading({ children }: { children?: React.ReactNode }) {
@@ -27,7 +60,7 @@ export default function Markdown({ children }: { children: string }) {
     <div className="prose">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
-        rehypePlugins={[rehypeHighlight]}
+        rehypePlugins={[rehypeUnwrapParagraphs, rehypeHighlight]}
         components={{
           h2: heading('h2'),
           h3: heading('h3'),
