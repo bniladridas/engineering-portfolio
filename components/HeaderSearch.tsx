@@ -14,7 +14,7 @@ export default function HeaderSearch() {
   }
 
   return (
-    <form role="search" onSubmit={onSubmit}>
+    <form role="search" onSubmit={onSubmit} className="header-search">
       <label className="sr-only" htmlFor="site-search">
         Search articles and posts
       </label>
@@ -31,6 +31,7 @@ export default function HeaderSearch() {
           border: '1px solid var(--line)',
           borderRadius: 8,
           width: 130,
+          maxWidth: '100%',
           outline: 'none',
         }}
       />

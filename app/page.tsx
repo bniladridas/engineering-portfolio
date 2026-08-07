@@ -61,7 +61,7 @@ export default function Home() {
               Keeping software understandable, maintainable, and adaptable is. That belief shows up in
               everything I make: systems, tools, and open source.
             </p>
-            <div style={{ display: 'flex', gap: 'var(--space-4)' }}>
+            <div className="action-row" style={{ display: 'flex', gap: 'var(--space-4)' }}>
               <a href={withBase(`/articles/${latest.slug}/`)} className="button button--primary">
                 Latest article
               </a>
@@ -84,7 +84,7 @@ export default function Home() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(min(300px, 100%), 1fr))',
               gap: 'var(--space-5)',
             }}
           >
@@ -121,7 +121,7 @@ export default function Home() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(min(300px, 100%), 1fr))',
               gap: 'var(--space-5)',
               marginTop: 'var(--space-5)',
             }}
@@ -184,7 +184,7 @@ export default function Home() {
               Palmshed is developed in the open: the code, the design notes, and the mistakes.
               Building in public changed how I work, and the practice matters more than the code.
             </p>
-            <div style={{ display: 'flex', gap: 'var(--space-4)', marginTop: 'var(--space-5)' }}>
+            <div className="action-row" style={{ display: 'flex', gap: 'var(--space-4)', marginTop: 'var(--space-5)' }}>
               <a href={withBase('/open-source/')} className="button button--primary">
                 Open source
               </a>
@@ -207,7 +207,7 @@ export default function Home() {
               I write about maintainable systems and developer tools, and I&rsquo;m happy to talk
               about both: systems design, code review, or building in public.
             </p>
-            <div style={{ display: 'flex', gap: 'var(--space-4)', marginTop: 'var(--space-5)' }}>
+            <div className="action-row" style={{ display: 'flex', gap: 'var(--space-4)', marginTop: 'var(--space-5)' }}>
               <a href="mailto:hello@palmshed.dev" className="button button--primary">
                 Email me
               </a>

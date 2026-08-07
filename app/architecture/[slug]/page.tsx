@@ -73,6 +73,7 @@ export default async function ArchNotePage({ params }: { params: Promise<{ slug:
         <Markdown>{note.content}</Markdown>
         <nav
           aria-label="Note navigation"
+          className="grid-2"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(2, 1fr)',

@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer style={{ borderTop: '1px solid var(--line)', marginTop: 'var(--space-8)' }}>
       <div
-        className="container"
+        className="container footer-row"
         style={{
           display: 'flex',
           justifyContent: 'space-between',

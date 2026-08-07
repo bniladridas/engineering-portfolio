@@ -13,12 +13,13 @@ export default function Header() {
   return (
     <header style={{ borderBottom: '1px solid var(--line)' }}>
       <div
-        className="container"
+        className="container header"
         style={{
           display: 'flex',
+          flexWrap: 'wrap',
           alignItems: 'center',
           justifyContent: 'space-between',
-          gap: 'var(--space-4)',
+          gap: 'var(--space-3) var(--space-4)',
           paddingTop: 'var(--space-4)',
           paddingBottom: 'var(--space-4)',
         }}
@@ -32,7 +33,7 @@ export default function Header() {
           </svg>
           <span style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: 18 }}>Palmshed</span>
         </Link>
-        <nav aria-label="Primary" style={{ display: 'flex', gap: 'var(--space-5)' }}>
+        <nav aria-label="Primary" className="header-nav" style={{ display: 'flex', gap: 'var(--space-5)' }}>
           {nav.map((item) => (
             <Link
               key={item.href}

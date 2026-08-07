@@ -329,6 +329,43 @@ button:focus-visible {
   .container {
     padding: 0 var(--space-4);
   }
+
+  .header-nav {
+    order: 3;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: var(--space-3) var(--space-4);
+  }
+
+  .header-search {
+    margin-left: auto;
+  }
+
+  .article-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .article-toc {
+    position: static !important;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .action-row {
+    flex-wrap: wrap;
+  }
+
+  .footer-row {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: var(--space-2) var(--space-4);
+  }
+
+  .meta-row {
+    flex-wrap: wrap;
+  }
 }
 
 /* highlight.js: GitHub light palette, tuned to the design system */

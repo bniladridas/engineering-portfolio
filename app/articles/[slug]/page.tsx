@@ -64,6 +64,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     <article className="container" style={{ paddingTop: 'var(--space-8)', paddingBottom: 'var(--space-8)' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div
+        className="article-layout"
         style={{
           display: 'grid',
           gridTemplateColumns: '220px 1fr',
@@ -71,7 +72,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           alignItems: 'start',
         }}
       >
-        <aside style={{ position: 'sticky', top: 'var(--space-6)' }}>
+        <aside className="article-toc" style={{ position: 'sticky', top: 'var(--space-6)' }}>
           <TableOfContents items={toc} />
         </aside>
         <Reveal>
@@ -91,6 +92,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               {article.intro}
             </p>
             <div
+              className="meta-row"
               style={{
                 display: 'flex',
                 alignItems: 'center',

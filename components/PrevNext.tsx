@@ -6,6 +6,7 @@ export default function PrevNext({ previous, next }: { previous?: Article; next?
   return (
     <nav
       aria-label="Article navigation"
+      className="grid-2"
       style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
