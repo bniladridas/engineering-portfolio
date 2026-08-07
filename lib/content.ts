@@ -25,6 +25,16 @@ function words(text: string): number {
   return text.split(/\s+/).filter(Boolean).length
 }
 
+function isPublished(date: string | Date): boolean {
+  const day = date instanceof Date ? date.toISOString().slice(0, 10) : String(date).slice(0, 10)
+  return day <= new Date().toISOString().slice(0, 10)
+}
+
+function internalContentSlug(link: string): string | null {
+  const match = link.match(/^\/(articles|architecture)\/([^/]+)\/?$/)
+  return match ? match[2] : null
+}
+
 export function getArticles(): Article[] {
   return readDir('articles')
     .map((file) => {
@@ -43,6 +53,7 @@ export function getArticles(): Article[] {
         words: words(content),
       }
     })
+    .filter((a) => isPublished(a.date))
     .sort((a, b) => (a.date < b.date ? 1 : -1))
 }
 
@@ -64,6 +75,7 @@ export function getPosts(): Post[] {
         plain: toPlainText(content),
       }
     })
+    .filter((p) => isPublished(p.date))
     .sort((a, b) => (a.date < b.date ? 1 : -1))
 }
 
@@ -72,6 +84,8 @@ export function getPost(slug: string): Post | undefined {
 }
 
 export function getCards(): Card[] {
+  const publishedArticles = new Set(getArticles().map((a) => a.slug))
+  const publishedNotes = new Set(getArchNotes().map((n) => n.slug))
   return readDir('featured')
     .map((file) => {
       const { data, content, slug } = readFile('featured', file)
@@ -85,6 +99,11 @@ export function getCards(): Card[] {
         content,
         description: cardDescription(content),
       }
+    })
+    .filter((card) => {
+      const target = internalContentSlug(card.link)
+      if (!target) return true
+      return publishedArticles.has(target) || publishedNotes.has(target)
     })
     .sort((a, b) => (a.slug < b.slug ? -1 : 1))
 }
